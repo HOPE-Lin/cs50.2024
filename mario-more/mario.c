@@ -14,7 +14,7 @@ int main(void)
     for (i = 0; i < number; i++)
     {
         space = number - 1 - i;
-        row(i+1);
+        row(space i+1);
     }
 }
 void row(int space, int i)
