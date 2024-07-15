@@ -2,7 +2,7 @@
 #include <stdio.h>
 int main(void)
 {
-    int number, i, j, k;
+    int number, i, j, k=0;
     do
     {
         number = get_int("Height:\n");
