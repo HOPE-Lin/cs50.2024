@@ -11,7 +11,7 @@ int main(void)
         number = number / 10;
         i++;
     }
-    for(j=0; j<=i; j++)
+    for(j=1; j<=i; j += 2)
     {
         k = 2 * num[j];
         if (k > 9)
@@ -21,4 +21,5 @@ int main(void)
         else
             sum += k;
     }
+    
 }
