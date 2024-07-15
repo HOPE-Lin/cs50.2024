@@ -6,8 +6,8 @@ int main(void)
     do{
         number = get_int("Height:\n");
     }while(number<0);
-    for(i=0;i<number;i++){
-        for(j=0;j<i;j++){
+    for(i=1;i<=number;i++){
+        for(j=1;j<=i;j++){
             printf("#");
         }
         printf("\n");
