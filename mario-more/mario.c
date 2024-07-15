@@ -24,12 +24,12 @@ void row(int space, int i)
     {
          printf(" ");
     }
-    for (k = 0; k < i; i++)
+    for (k = 0; k < i; k++)
     {
          printf("#");
     }
     printf("  ");
-    for (k = 0; k < i; i++)
+    for (k = 0; k < i; k++)
     {
         printf("#");
     }
