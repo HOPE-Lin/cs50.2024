@@ -6,5 +6,8 @@ int main(void)
     int i;
     number = ger_long("Number:");
     while (number > 9)
-    {}
+    {
+        i = number % 100;
+        number = number / 100
+    }
 }
