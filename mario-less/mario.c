@@ -12,7 +12,7 @@ int main(void)
     {
         for (j = 1; j <= number; j++)
         {
-            k = number - 1;
+            k = number - i;
             if (j <= k)
             {
                 printf(" ");
