@@ -22,7 +22,7 @@ int calculate_quarters(int cents)
         cents -= 25;
         i++;
     }
-    while (cents >=10)
+    while (cents >= 10)
     {
         cents -= 10;
         i++;
@@ -32,7 +32,7 @@ int calculate_quarters(int cents)
         cents -= 5;
         i++;
     }
-    while (cents >0)
+    while (cents > 0)
     {
         cents--;
         i++;
