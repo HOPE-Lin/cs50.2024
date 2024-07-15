@@ -1,5 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
+
+void row(int space, int i)
+
 int main(void)
 {
     int number, space, i, j;
@@ -8,7 +11,7 @@ int main(void)
         number = get_int("Height: ");
     }
     while(number<1||number>8);
-    for(i=0;i<number;i++)
+    for (i = 0; i < number; i++)
     {
         space = number - 1 - i;
         row(i+1);
@@ -17,11 +20,19 @@ int main(void)
 void row(int space, int i)
 {
     int k;
-    for(k = 0; k < space;k++)
+    for (k = 0; k < space; k++)
     {
-        printf(" ");
+         printf(" ");
     }
-
+    for (k = 0; k < i; i++)
+    {
+         printf("#");
+    }
+    printf("  ");
+    for (k = 0; k < i; i++)
+    {
+        printf("#");
+    }
 }
 
 
