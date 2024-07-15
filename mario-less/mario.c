@@ -14,11 +14,10 @@ int main(void)
         {
             if (j <= number - i)
             {
-              printf(" ");
-
+                printf(" ");
             }
-           else
-               printf("#");
+            else
+                printf("#");
         }
         printf("\n");
     }
