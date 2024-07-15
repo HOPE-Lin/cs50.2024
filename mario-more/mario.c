@@ -10,7 +10,7 @@ int main(void)
     {
         number = get_int("Height: ");
     }
-    while(number<1||number>8);
+    while (number < 1|| number > 8);
     for (i = 0; i < number; i++)
     {
         space = number - 1 - i;
@@ -33,6 +33,7 @@ void row(int space, int i)
     {
         printf("#");
     }
+    printf("\n");
 }
 
 
