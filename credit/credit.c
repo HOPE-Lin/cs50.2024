@@ -2,6 +2,6 @@
 #include <stdio.h>
 int main(void)
 {
-    int number;
-    
+    long number;
+    number = ger_long("Number:");
 }
