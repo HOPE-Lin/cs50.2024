@@ -21,5 +21,10 @@ int main(void)
         else
             sum += k;
     }
+    if (sum % 10 != 0)
+    {
+        printf("INVALID");
+        return 1;
+    }
     
 }
