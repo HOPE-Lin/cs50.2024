@@ -2,7 +2,7 @@
 #include <stdio.h>
 int main(void)
 {
-    int number, i, j;
+    int number, i, j, k;
     do
     {
         number = get_int("Height:\n");
@@ -12,7 +12,8 @@ int main(void)
     {
         for (j = 1; j <= number; j++)
         {
-            if (j <= number - i)
+            k = number - 1;
+            if (j <= k)
             {
                 printf(" ");
             }
