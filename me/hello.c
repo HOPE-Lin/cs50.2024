@@ -1,8 +1,8 @@
 #include <stdio.h>
-#include <CS50.h>
+#include <cs50.h>
    int main(void)
 {
-string name=getstring("What's your name:\n");
+string name=get_string("What's your name:\n");
 printf("hello, %s\n",name);
 
 }
