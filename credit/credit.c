@@ -3,7 +3,7 @@
 int main(void)
 {
     long number;
-    int num[20], i = 0, j=0;
+    int num[20], i = 0, j = 0, sum = 0, k = 0;
     number = ger_long("Number:");
     while (number != 9)
     {
@@ -13,9 +13,12 @@ int main(void)
     }
     for(j=0; j<=i; j++)
     {
-        if (num[j] > 9)
+        k = 2 * num[j];
+        if (k > 9)
         {
-            
+            sum = sum + k % 10 + 1;
         }
+        else
+            sum += k;
     }
 }
