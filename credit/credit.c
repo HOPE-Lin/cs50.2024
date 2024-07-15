@@ -4,4 +4,8 @@ int main(void)
 {
     long number;
     number = ger_long("Number:");
+    while (number > 9)
+    {
+        
+    }
 }
