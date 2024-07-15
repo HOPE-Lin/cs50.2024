@@ -7,8 +7,12 @@ int main(void)
         number = get_int("Height:\n");
     }while(number<1);
     for(i=1;i<=number;i++){
-        for(j=1;j<=i;j++){
-            printf("#");
+        for(j=1;j <= number;j++){
+            if(j <= number-i){
+              printf(" ");
+
+            }
+           else printf("#");
         }
         printf("\n");
     }
