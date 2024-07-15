@@ -3,12 +3,19 @@
 int main(void)
 {
     long number;
-    int num[20], i = 0;
+    int num[20], i = 0, j=0;
     number = ger_long("Number:");
-    while (number > 9)
+    while (number != 9)
     {
         num[i] = number % 10;
         number = number / 10;
         i++;
+    }
+    for(j=0; j<=i; j++)
+    {
+        if (num[j] > 9)
+        {
+            
+        }
     }
 }
