@@ -27,6 +27,10 @@ int count_words(string text)
     int i, count = 0;
     for(i = 0, len = strlen(text); i < len; i++)
     {
-        if ()
+        if (isblank(text[i]))
+        {
+            count++;
+        }
     }
+    return count;
 }
