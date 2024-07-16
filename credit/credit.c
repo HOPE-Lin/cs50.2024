@@ -32,12 +32,18 @@ int main(void)
     }
     int start = 0;
     start = 10 * num[i - 1] + num[i - 2];
-    if (start == 34 || start == 37 || start ==51 || start == 52 || start == 53 || start == 54)
+    if (i == 15 && (start == 34 || start == 37))
     {
-        printf("VAILD\n");
+        printf("AMEX\n");
     }
-    else if (num[i - 1] == 4)
-        printf("VAILD\n");
+    else if (i == 16 &&(start == 51 || start == 52 || start == 53 || start == 54 ||start == 55))
+    {
+        printf("MASTERCARD\n");
+    }
+    else if ((i == 13 || i == 16) && num[i - 1] == 4)
+    {
+        printf("VISA\n");
+    }
     else
         printf("INVAILD\n");
 }
