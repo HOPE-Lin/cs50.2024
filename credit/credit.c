@@ -28,7 +28,7 @@ int main(void)
     if (sum % 10 != 0)
     {
         printf("INVALID\n");
-        return 1;
+        return 0;
     }
     int start = 0;
     start = 10 * num[i - 1] + num[i - 2];
