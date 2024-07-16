@@ -39,5 +39,5 @@ int main(void)
     else if (num[i] == 4)
         printf("VAILD\n");
     else
-        printf("INVAILD\n");
+        printf("INVAILD5\n");
 }
