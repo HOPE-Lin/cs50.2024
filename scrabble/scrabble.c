@@ -13,8 +13,18 @@ int main(void)
     string word2 = get_string("Player 2: ");
     int score1 = compute(word1);
     int score2 = compute(word2);
-    
-
+    if (score1 > score2)
+    {
+        printf("Player 1 wins!\n");
+    }
+    else if (score2 > score1)
+    {
+        printf("Player 2 wins!\n");
+    }
+    else
+    {
+        printf("Tie!\n");
+    }
 }
 int compute(string word)
 {
