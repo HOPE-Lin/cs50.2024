@@ -27,5 +27,9 @@ int main(void)
         return 1;
     }
     int start = 0;
-    start = 
+    start = number[i] * 10 +number[i-1];
+    if (start == 34 || start == 37 || start ==51 || start == 52 || start == 53 || start == 54)
+    {
+        printf("VAILD");
+    }
 }
