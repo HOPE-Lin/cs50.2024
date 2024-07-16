@@ -2,7 +2,7 @@
 #include <stdio.h>
 int main(void)
 {
-    long number;
+    string number;
     int num[20], i = 0, j = 0, sum = 0, k = 0;
     number = get_long("Number:");
     while (number != 0)
