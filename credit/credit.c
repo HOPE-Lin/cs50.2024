@@ -9,7 +9,7 @@ int main(void)
     {
         num[i] = number % 10;
         number = number / 10;
-        i++;
+        i++;printf("%d\n",num[i]);
     }
     for(j = 1; j <= i; j += 2)
     {
@@ -24,7 +24,7 @@ int main(void)
     for(j = 0; j <= i; j += 2)
     {
         sum += num[j];
-    }printf("%d\n",num[i]);
+    }
     if (sum % 10 != 0)
     {
         printf("INVALID\n");
