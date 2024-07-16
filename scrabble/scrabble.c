@@ -14,6 +14,7 @@ int main(void)
     int score1 = compute(word1);
     int score2 = compute(word2);
     
+
 }
 int compute(string word)
 {
@@ -21,7 +22,10 @@ int compute(string word)
     for (int i = 0, len = strlen(word); i < len; i++)
     {
         word[i] = isupper(word[i]);
-        score += word[i] - 'A';
-        return score;
+        if (word[i] >= 'A' || word[i] <= 'Z')
+        {
+            score += word[i] - 'A';
+        }
     }
+    return score;
 }
