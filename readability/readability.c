@@ -18,9 +18,10 @@ int main(void)
     int sentences = count_sentences(text);
     int index;
     double L;
-    L = ((double) letters / (double) words) * 0.0588 * 100 - ((double) sentences / (double) words) *100 * 0.296 - 15.8;
+    L = ((double) letters / (double) words) * 0.0588 * 100 -
+        ((double) sentences / (double) words) * 100 * 0.296 - 15.8;
     index = (int) round(L);
-    if (index > 16 )
+    if (index > 16)
     {
         printf("Grade 16+\n");
     }
@@ -48,7 +49,7 @@ int count_letters(string text)
 int count_words(string text)
 {
     int i, count = 0, len;
-    for(i = 0, len = strlen(text); i < len; i++)
+    for (i = 0, len = strlen(text); i < len; i++)
     {
         if (isblank(text[i]))
         {
