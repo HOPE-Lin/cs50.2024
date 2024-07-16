@@ -31,10 +31,13 @@ int compute(string word)
     int score = 0;
     for (int i = 0, len = strlen(word); i < len; i++)
     {
-        if ((word[i] >= 'A' && word[i] <= 'Z')||(word[i] >= 'a' && word[i] <= 'z'))
+        if (isupper(word[i]))
         {
-            isupper(word[i]);
             score += POINTS[word[i] - 'A'];
+        }
+        if (islower(word[i]))
+        {
+            score += POINTS[word[i] - 'a'];
         }
     }
     return score;
