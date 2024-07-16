@@ -24,13 +24,13 @@ int main(void)
     for(j = 0; j <= i; j += 2)
     {
         sum += num[j];
-    }
+    }printf("%d\n",num[i]);
     if (sum % 10 != 0)
     {
         printf("INVALID\n");
         return 1;
     }
-    int start = 0;printf("%d\n",num[i]);
+    int start = 0;
     start = 10 * num[i] + num[i-1];
     if (start == 34 || start == 37 || start ==51 || start == 52 || start == 53 || start == 54)
     {
