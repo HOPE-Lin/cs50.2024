@@ -26,5 +26,6 @@ int main(void)
         printf("INVALID");
         return 1;
     }
-    
+    int start = 0;
+    start = 
 }
