@@ -12,5 +12,21 @@ int main(void)
 }
 int count_letters(string text)
 {
-    
+    int i, count = 0;
+    for (i = 0, len = strlen(text); i < len; i++)
+    {
+        if (isalpha(text[i]))
+        {
+            count++;
+        }
+    }
+    return count;
+}
+int count_words(string text)
+{
+    int i, count = 0;
+    for(i = 0, len = strlen(text); i < len; i++)
+    {
+        if ()
+    }
 }
