@@ -18,7 +18,7 @@ int main(void)
     int sentences = count_sentences(text);
     int index;
     double L;
-    L = ((double) letters * 100 / (double) words) * 0.0588 + ((double) words * 100 / (double) sentences) * 0.296 - 15.8
+    L = ((double) letters * 100 / (double) words) * 0.0588 + ((double) words * 100 / (double) sentences) * 0.296 - 15.8;
     index = (int) round(L);
     if (index > 16 )
     {
@@ -35,7 +35,7 @@ int main(void)
 }
 int count_letters(string text)
 {
-    int i, count = 0;
+    int i, count = 0, len;
     for (i = 0, len = strlen(text); i < len; i++)
     {
         if (isalpha(text[i]))
@@ -47,7 +47,7 @@ int count_letters(string text)
 }
 int count_words(string text)
 {
-    int i, count = 0;
+    int i, count = 0, len;
     for(i = 0, len = strlen(text); i < len; i++)
     {
         if (isblank(text[i]))
@@ -59,7 +59,7 @@ int count_words(string text)
 }
 int count_sentences(string text)
 {
-    int i, count = 0;
+    int i, count = 0, len;
     for (i = 0, len = strlen(text); i < len; i++)
     {
         if (ispunct(text[i]))
