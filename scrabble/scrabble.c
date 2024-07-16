@@ -31,9 +31,9 @@ int compute(string word)
     int score = 0;
     for (int i = 0, len = strlen(word); i < len; i++)
     {
-        word[i] = isupper(word[i]);
-        if (word[i] >= 'A' || word[i] <= 'Z')
+        if ((word[i] >= 'A' && word[i] <= 'Z')||(word[i] >= 'a' && word[i] <= 'z'))
         {
+            word[i] = isupper(word[i]);
             score += POINTS[word[i] - 'A'];
         }
     }
