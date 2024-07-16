@@ -21,6 +21,10 @@ int main(void)
         else
             sum += k;
     }
+    for(j = 0; j <= i; j += 2)
+    {
+        sum += num[j];
+    }
     if (sum % 10 != 0)
     {
         printf("INVALID\n");
