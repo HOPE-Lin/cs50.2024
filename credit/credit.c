@@ -23,13 +23,15 @@ int main(void)
     }
     if (sum % 10 != 0)
     {
-        printf("INVALID");
+        printf("INVALID\n");
         return 1;
     }
     int start = 0;
     start = 10 * num[i] + num[i-1];
     if (start == 34 || start == 37 || start ==51 || start == 52 || start == 53 || start == 54)
     {
-        printf("VAILD");
+        printf("VAILD\n");
     }
+    else
+        printf("INVAILD");
 }
