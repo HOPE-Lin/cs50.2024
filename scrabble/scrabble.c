@@ -13,12 +13,15 @@ int main(void)
     string word2 = get_string("Player 2: ");
     int score1 = compute(word1);
     int score2 = compute(word2);
+    
 }
 int compute(string word)
 {
     int score = 0;
     for (int i = 0, len = strlen(word); i < len; i++)
     {
-        
+        word[i] = isupper(word[i]);
+        score += word[i] - 'A';
+        return score;
     }
 }
