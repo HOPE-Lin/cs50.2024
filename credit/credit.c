@@ -36,6 +36,8 @@ int main(void)
     {
         printf("VAILD\n");
     }
+    else if (num[i] == 4)
+        printf("VAILD\n");
     else
-        printf("INVAILD");
+        printf("INVAILD\n");
 }
