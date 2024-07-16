@@ -4,7 +4,7 @@ int main(void)
 {
     long number;
     int num[20], i = 0, j = 0, sum = 0, k = 0;
-    number = ger_long("Number:");
+    number = get_long("Number:");
     while (number != 9)
     {
         num[i] = number % 10;
