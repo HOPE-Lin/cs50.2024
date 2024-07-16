@@ -11,7 +11,7 @@ int main(void)
         number = number / 10;
         i++;
     }
-    for(j = 1; j < i; j += 2)
+    for (j = 1; j < i; j += 2)
     {
         k = 2 * num[j];
         if (k > 9)
@@ -21,7 +21,7 @@ int main(void)
         else
             sum += k;
     }
-    for(j = 0; j < i; j += 2)
+    for (j = 0; j < i; j += 2)
     {
         sum += num[j];
     }
@@ -36,7 +36,7 @@ int main(void)
     {
         printf("AMEX\n");
     }
-    else if (i == 16 &&(start == 51 || start == 52 || start == 53 || start == 54 ||start == 55))
+    else if (i == 16 && (start == 51 || start == 52 || start == 53 || start == 54 || start == 55))
     {
         printf("MASTERCARD\n");
     }
