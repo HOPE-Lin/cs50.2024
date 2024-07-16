@@ -34,7 +34,7 @@ int compute(string word)
         word[i] = isupper(word[i]);
         if (word[i] >= 'A' || word[i] <= 'Z')
         {
-            score += word[i] - 'A';
+            score += POINTS[word[i] - 'A'];
         }
     }
     return score;
