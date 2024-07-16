@@ -45,5 +45,5 @@ int main(void)
         printf("VISA\n");
     }
     else
-        printf("INVAILD\n");
+        printf("INVALID\n");
 }
