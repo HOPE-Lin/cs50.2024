@@ -3,6 +3,11 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+
+bool only_alpha(string text);
+
+char encrypt(char a, string key);
+
 int main(int argc, string argv[])
 {
     if (argc != 2)
@@ -21,9 +26,10 @@ int main(int argc, string argv[])
     {
         if(isalpha != 0)
         {
-            plaintext = encrypt(plaintext[i], argv[1]);
+            plaintext[i] = encrypt(plaintext[i], argv[1]);
         }
     }
+    printf("ciphertext: %s\n", plaintext);
 }
 bool only_alpha(string text)
 {
@@ -44,5 +50,19 @@ bool only_alpha(string text)
 }
 char encrypt(char a, string key)
 {
-    
+    int i = 0;
+    char b;
+    if (isupper != 0)
+    {
+        i = a - 'A';
+        b = key[i];
+        b = toupper(b);
+    }
+    else
+    {
+        i = a - 'a';
+        b = key[i];
+        b = toupper(b);
+    }
+    return b;
 }
