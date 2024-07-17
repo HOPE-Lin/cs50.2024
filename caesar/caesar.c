@@ -46,20 +46,15 @@ bool only_digits(string text)
 }
 char rotate(char a, int k)
 {
-    char i = a + k;
+    int i;
+    char b;
     if (isupper(a) != 0)
     {
-        if(i > 'Z')
-        {
-            i = i - 'Z' + 'A';
-        }
+        i = a - 'A';
+        i = (i + k) % 26;
+        b = 'A' + i;
     }
     if (islower(a) != 0)
-    {
-        if(i > 'z')
-        {
-            i = i - 'z' + 'a';
-        }
-    }
+    {}
     return i;
 }
