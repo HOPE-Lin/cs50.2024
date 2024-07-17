@@ -24,7 +24,7 @@ int main(int argc, string argv[])
     string plaintext = get_string("plaintext: ");
     for (int i = 0, len = strlen(plaintext); i < len;i++)
     {
-        if(isalpha != 0)
+        if(isalpha(plaintext[i]) != 0)
         {
             plaintext[i] = encrypt(plaintext[i], argv[1]);
         }
@@ -34,10 +34,10 @@ int main(int argc, string argv[])
 bool only_alpha(string text)
 {
     bool b = false;
-    int i = 0;
+    int i = 0, len;
     for (i = 0, len = strlen (text); i < len; i++)
     {
-       if (isalpha == 0)
+       if (isalpha(text[i]) == 0)
        {
         return b;
        }
@@ -52,7 +52,7 @@ char encrypt(char a, string key)
 {
     int i = 0;
     char b;
-    if (isupper != 0)
+    if (isupper(a) != 0)
     {
         i = a - 'A';
         b = key[i];
