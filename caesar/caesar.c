@@ -29,7 +29,7 @@ int main(int argc, string argv[])
             plaintext[i] = rotate(plaintext[i], key);
         }
     }
-    printf("plaintext: %s\n", plaintext);
+    printf("ciphertext: %s\n", plaintext);
 }
 bool only_digits(string text)
 {
