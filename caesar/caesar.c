@@ -18,9 +18,9 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    int key = atoi(argv[1]);
+    int key = atoi(argv[1]) % 26;
     string plaintext = get_string("plaintext :\n");
-    
+
 }
 bool only_digits(string text)
 {
