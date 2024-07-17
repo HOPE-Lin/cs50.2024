@@ -62,7 +62,7 @@ char encrypt(char a, string key)
     {
         i = a - 'a';
         b = key[i];
-        b = toupper(b);
+        b = tolower(b);
     }
     return b;
 }
