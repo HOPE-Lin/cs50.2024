@@ -22,7 +22,10 @@ int main(int argc, string argv[])
     string plaintext = get_string("plaintext :\n");
     for (int i = 0, len = strlen(plaintext); i < len; i++)
     {
-        
+        if (isalpha(plaintext[i]) != 0)
+        {
+            plaintext = rotate(plaintext[1], key);
+        }
     }
 }
 bool only_digits(string text)
@@ -37,4 +40,8 @@ bool only_digits(string text)
         }
     }
     return anwers;
+}
+char rotate(char a, int k)
+{
+    return a + k;
 }
