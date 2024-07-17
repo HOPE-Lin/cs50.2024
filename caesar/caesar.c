@@ -20,7 +20,10 @@ int main(int argc, string argv[])
     }
     int key = atoi(argv[1]) % 26;
     string plaintext = get_string("plaintext :\n");
-
+    for (int i = 0, len = strlen(plaintext); i < len; i++)
+    {
+        
+    }
 }
 bool only_digits(string text)
 {
