@@ -42,7 +42,8 @@ bool only_alpha(string text)
         return b;
        }
     }
-   char c
+   char c;
+   
     return b;
 }
 char encrypt(char a, string key)
