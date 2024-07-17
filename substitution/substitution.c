@@ -21,7 +21,7 @@ int main(int argc, string argv[])
     {
         if(isalpha != 0)
         {
-            plaintext = encrypt()
+            plaintext = encrypt(plaintext[i], );
         }
     }
 }
