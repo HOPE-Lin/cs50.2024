@@ -47,8 +47,9 @@ bool only_alpha(string text)
        {
         return b;
        }
-       c[i] = toupper(text[i]);
+       c[i] = text[i];
     }
+    for(i = 0)
     for (i = 0; i < len - 1; i++)
     {
         for (int j = i + 1; j < len; j++)
