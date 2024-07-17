@@ -34,16 +34,32 @@ int main(int argc, string argv[])
 bool only_alpha(string text)
 {
     bool b = false;
+    char* c[30];
     int i = 0, len = 0;
-    for (i = 0, len = strlen (text); i < len; i++)
+    len = strlen (text);
+    if(len != 26)
+    {
+        return b;
+    }
+    for (i = 0; i < len; i++)
     {
        if (isalpha(text[i]) == 0)
        {
         return b;
        }
+       c[i] = toupper(text[i]);
     }
-   char c;
-   
+    for (i = 0; i < len - 1; i++)
+    {
+        for (int j = i + 1; j < len; j++)
+        {
+            if (c[i] == c[j])
+            {
+                return b;
+            }
+        }
+    }
+    b = true;
     return b;
 }
 char encrypt(char a, string key)
