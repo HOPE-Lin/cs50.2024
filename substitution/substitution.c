@@ -8,10 +8,15 @@ int main(int argc, string argv[])
     if (argc != 2)
     {
         printf("Usage: ,/substitution key\n");
-        return 0;
+        return 1;
     }
-    bool answer = only_alpha(argv[]);
-    if (answer == )
+    bool answer = only_alpha(argv[1]);
+    if (answer == false)
+    {
+        printf("Key must contain 26 characters.\n");
+        return 1;
+    }
+    string plaintext = get_string("plaintext: ");
 }
 bool only_alpha(string text)
 {
