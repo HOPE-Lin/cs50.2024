@@ -55,6 +55,10 @@ char rotate(char a, int k)
         b = 'A' + i;
     }
     if (islower(a) != 0)
-    {}
-    return i;
+    {
+        i = a - 'a';
+        i = (i + k) % 26;
+        b = 'a' + i;
+    }
+    return b;
 }
