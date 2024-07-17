@@ -17,6 +17,13 @@ int main(int argc, string argv[])
         return 1;
     }
     string plaintext = get_string("plaintext: ");
+    for (int i = 0, len = strlen(plaintext); i < len;i++)
+    {
+        if(isalpha != 0)
+        {
+            plaintext = 
+        }
+    }
 }
 bool only_alpha(string text)
 {
