@@ -34,7 +34,7 @@ int main(int argc, string argv[])
 bool only_alpha(string text)
 {
     bool b = false;
-    int i = 0, len;
+    int i = 0, len = 0;
     for (i = 0, len = strlen (text); i < len; i++)
     {
        if (isalpha(text[i]) == 0)
@@ -42,7 +42,7 @@ bool only_alpha(string text)
         return b;
        }
     }
-    if (i == 25)
+    if (len == 26)
     {
         b = true;
     }
