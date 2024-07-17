@@ -21,15 +21,15 @@ int main(int argc, string argv[])
         return 1;
     }
     int key = atoi(argv[1]) % 26;
-    string plaintext = get_string("plaintext :\n");
+    string plaintext = get_string("plaintext :");
     for (int i = 0, len = strlen(plaintext); i < len; i++)
     {
         if (isalpha(plaintext[i]) != 0)
         {
-            plaintext[i] = rotate(plaintext[1], key);
+            plaintext[i] = rotate(plaintext[i], key);
         }
     }
-    printf("plaintext: %s", plaintext);
+    printf("plaintext: %s\n", plaintext);
 }
 bool only_digits(string text)
 {
