@@ -48,7 +48,7 @@ bool only_alpha(string text)
         return b;
        }
        c[i] = text[i];
-       tolower(c[i]);
+       int p = tolower(c[i]);
     }
     for (i = 0; i < len - 1; i++)
     {
