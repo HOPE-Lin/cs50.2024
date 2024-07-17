@@ -46,5 +46,11 @@ bool only_digits(string text)
 }
 char rotate(char a, int k)
 {
-    return a + k;
+    if (isuppe(a) != 0)
+    {
+        if(i > 'Z')
+        {
+            i = i - 26
+        }
+    }
 }
