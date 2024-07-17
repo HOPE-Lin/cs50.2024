@@ -42,10 +42,7 @@ bool only_alpha(string text)
         return b;
        }
     }
-    if (len == 26)
-    {
-        b = true;
-    }
+   char c
     return b;
 }
 char encrypt(char a, string key)
