@@ -12,7 +12,7 @@ int main(int argc, string argv[])
 {
     if (argc != 2)
     {
-        printf("Usage: ,/substitution key\n");
+        printf("Usage: ./substitution key\n");
         return 1;
     }
     bool answer = only_alpha(argv[1]);
