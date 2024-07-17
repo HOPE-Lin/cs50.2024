@@ -23,7 +23,7 @@ bool only_digits(string text)
     bool anwers = true;
     for(int i = 0, len = strlen(text); i < len; i++)
     {
-        if ( ! isdigit(string[i]))
+        if (isdigit(text[i]) == 0)
         {
             anwers = false;
             return anwers;
