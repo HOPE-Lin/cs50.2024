@@ -2,8 +2,10 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 bool only_digits(string);
+char rotate(char a, int k);
 
 int main(int argc, string argv[])
 {
@@ -24,9 +26,10 @@ int main(int argc, string argv[])
     {
         if (isalpha(plaintext[i]) != 0)
         {
-            plaintext = rotate(plaintext[1], key);
+            plaintext[i] = rotate(plaintext[1], key);
         }
     }
+    printf("plaintext: %s"plaintext);
 }
 bool only_digits(string text)
 {
