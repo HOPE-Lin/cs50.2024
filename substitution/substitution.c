@@ -10,6 +10,23 @@ int main(int argc, string argv[])
         printf("Usage: ,/substitution key\n");
         return 0;
     }
-    bool 
+    bool answer = only_alpha(argv[]);
+    if (answer == )
 }
-
+bool only_alpha(string text)
+{
+    bool b = false;
+    int i = 0;
+    for (i = 0, len = strlen (text); i < len; i++)
+    {
+       if (isalpha == 0)
+       {
+        return b;
+       }
+    }
+    if (i == 25)
+    {
+        b = true;
+    }
+    return b;
+}
