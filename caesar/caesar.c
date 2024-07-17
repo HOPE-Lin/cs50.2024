@@ -20,7 +20,7 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    int key = atoi(argv[1]) % 26;
+    int key = atoi(argv[1]);
     string plaintext = get_string("plaintext :");
     for (int i = 0, len = strlen(plaintext); i < len; i++)
     {
@@ -34,7 +34,7 @@ int main(int argc, string argv[])
 bool only_digits(string text)
 {
     bool anwers = true;
-    for(int i = 0, len = strlen(text); i < len; i++)
+    for (int i = 0, len = strlen(text); i < len; i++)
     {
         if (isdigit(text[i]) == 0)
         {
