@@ -34,7 +34,7 @@ int main(int argc, string argv[])
 bool only_alpha(string text)
 {
     bool b = false;
-    char* c[30];
+    char c[30];
     int i = 0, len = 0;
     len = strlen (text);
     if(len != 26)
@@ -48,8 +48,8 @@ bool only_alpha(string text)
         return b;
        }
        c[i] = text[i];
+       tolower(c[i]);
     }
-    for(i = 0)
     for (i = 0; i < len - 1; i++)
     {
         for (int j = i + 1; j < len; j++)
