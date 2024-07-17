@@ -21,7 +21,7 @@ int main(int argc, string argv[])
     {
         if(isalpha != 0)
         {
-            plaintext = encrypt(plaintext[i], );
+            plaintext = encrypt(plaintext[i], argv[1]);
         }
     }
 }
@@ -41,4 +41,8 @@ bool only_alpha(string text)
         b = true;
     }
     return b;
+}
+char encrypt(char a, string key)
+{
+    
 }
