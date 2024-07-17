@@ -22,7 +22,7 @@ int main(int argc, string argv[])
         return 1;
     }
     string plaintext = get_string("plaintext: ");
-    for (int i = 0, len = strlen(plaintext); i < len;i++)
+    for (int i = 0, len = strlen(plaintext); i < len; i++)
     {
         if(isalpha(plaintext[i]) != 0)
         {
