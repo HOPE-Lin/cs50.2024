@@ -56,7 +56,7 @@ char rotate(char a, int k)
     }
     if (islower(a) != 0)
     {
-        if(i > 'a')
+        if(i > 'z')
         {
             i = i - 'z' + 'a';
         }
