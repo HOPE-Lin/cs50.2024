@@ -162,6 +162,10 @@ bool print_winner(void)
 {
     // TODO
     int half = voter_count / 2;
+    for (int i = 0; i < voter_count; i++)
+    {
+        
+    }
     return false;
 }
 
