@@ -162,7 +162,7 @@ bool print_winner(void)
 {
     // TODO
     int half = voter_count / 2;
-    for (int i = 0; i < voter_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].voters > half)
         {
@@ -178,7 +178,7 @@ int find_min(void)
 {
     // TODO
     int tmp = 0;
-    for (int i = 0; i < voter_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if (tmp > candidates[i].voters && candidates[i].eliminated == false)
         {
@@ -192,6 +192,15 @@ int find_min(void)
 bool is_tie(int min)
 {
     // TODO
+    int j = 0;
+    for(int i = 0; i < candidate_count; i++)
+    {
+        if(min == candidates[i].voters)
+        {
+            j++;
+        }
+    }
+    if(j)
     return false;
 }
 
