@@ -161,6 +161,7 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
+    int half = voter_count / 2;
     return false;
 }
 
