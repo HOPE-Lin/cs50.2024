@@ -212,19 +212,20 @@ void print_winner(void)
              if (locked[i][j] == true)
              {
                  for (int k = 0; k < candidate_count; k++)
-                     {
-                         if (locked[k][i] == false)
-                             {
-                                 p++;
-                             }
-                     }
-                     if (p == candidate_count)
-                     {
-                        pritnf("%s\n", candidates[i])
-                     }
+                 {
+                      if (locked[k][i] == false)
+                      {
+                          p++;
+                      }
+                 }
+                 if (p == candidate_count)
+                 {
+                      pritnf("%s\n", candidates[i]);
+                      return;
+                 }
+                 p = 0;
              }
         }
-
     }
     return;
 }
