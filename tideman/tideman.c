@@ -161,8 +161,11 @@ void sort_pairs(void)
             if (preferences[pairs[j].winner][pairs[j].lower] > preferences[pairs[i].winner][pairs[j].lower])
             {
                 tmp.winner = pairs[j].winner;
+                tmp.lower = pairs[j].lower;
                 pairs[j].winner = pairs[i].winner;
+                pairs[j].lower = pairs[i].lower;
                 pairs[i].winner = tmp.winner;
+                pairs[i].lower = pairs[j].lower;
             }
         }
     }
