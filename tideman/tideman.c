@@ -187,6 +187,7 @@ void lock_pairs(void)
                 if (locked[j][k] == ture)
                 {
                     j = k;
+                    continue;
                 }
             }
 
