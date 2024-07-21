@@ -194,6 +194,7 @@ void lock_pairs(void)
             if (p == candidate_count - 1)
            {
             locked[pairs[i].winner][pairs[i].loser] = false;
+            return;
            }
         }
     }
