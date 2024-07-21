@@ -194,6 +194,7 @@ void lock_pairs(void)
                     }
                 }
             }
+            j = tmp;
         }
     }
     return;
