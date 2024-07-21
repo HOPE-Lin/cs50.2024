@@ -154,6 +154,7 @@ void sort_pairs(void)
     // TODO
     pair tmp;
     tmp.winner = 0;
+    tmp.loser = 0;
     for (int i = 0; i < pair_count - 1; i++)
     {
         for(int j = i + 1; j < pair_count; i++)
