@@ -209,7 +209,10 @@ void print_winner(void)
         for (int j = 0; j < candidate_count; j++)
         if (locked[i][j] == true)
         {
-            
+            for (int k = 0; k < candidate_count; k++)
+            {
+                if (locked[k][i] == false)
+            }
         }
     }
     return;
