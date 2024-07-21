@@ -180,6 +180,7 @@ void lock_pairs(void)
     int p = 0;
     for (int i = 0; i < pair_count; i++)
     {
+        p = 0;
         for (int j = 0; j < candidate_count; j++)
         {
             if (locked[pairs[i].winner][j] == false)
