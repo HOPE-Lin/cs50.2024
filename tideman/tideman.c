@@ -134,13 +134,13 @@ void add_pairs(void)
             if(preferences[i][j] > preferences[j][i])
             {
                 pairs[pair_count].winner = preferences[i][j];
-                pairs[pair_count].lower = preferences[j][i];
+                pairs[pair_count].loser = preferences[j][i];
                 pair_count++;
             }
             if(preferences[j][i] > preferences[i][j])
             {
                 pairs[pair_count].winner = preferences[j][i];
-                pairs[pair_count].lower = preferences[i][j];
+                pairs[pair_count].loser = preferences[i][j];
                 pair_count++;
             }
         }
@@ -158,14 +158,14 @@ void sort_pairs(void)
     {
         for(int j = i + 1; j < pair_count; i++)
         {
-            if (preferences[pairs[j].winner][pairs[j].lower] > preferences[pairs[i].winner][pairs[j].lower])
+            if (preferences[pairs[j].winner][pairs[j].loser] > preferences[pairs[i].winner][pairs[j].loser])
             {
                 tmp.winner = pairs[j].winner;
-                tmp.lower = pairs[j].lower;
+                tmp.loser = pairs[j].loser;
                 pairs[j].winner = pairs[i].winner;
-                pairs[j].lower = pairs[i].lower;
+                pairs[j].loser = pairs[i].loser;
                 pairs[i].winner = tmp.winner;
-                pairs[i].lower = pairs[j].lower;
+                pairs[i].loser = pairs[j].loser;
             }
         }
     }
@@ -178,18 +178,18 @@ void lock_pairs(void)
     // TODO
     for (int i = 0; i < pair_count; i++)
     {
-        locked[pairs[i].winner][pairs[i].lower] = true;
+        locked[pairs[i].winner][pairs[i].loser] = true;
         for (int j = 0; j < candidate_count; j++)
         {
             int tmp = j;
             for (int k = 0; k < candidate_count; k++)
             {
-                if (locked[j][k] == ture)
+                if (locked[j][k] == true)
                 {
                     j = k;
                     if (j == tmp)
                     {
-                        locked[pairs[i].winner][pairs[i].lower] = false;
+                        locked[pairs[i].winner][pairs[i].loser] = false;
                         return;
                     }
                 }
@@ -220,7 +220,7 @@ void print_winner(void)
                  }
                  if (p == candidate_count)
                  {
-                      pritnf("%s\n", candidates[i]);
+                      printf("%s\n", candidates[i]);
                       return;
                  }
                  p = 0;
