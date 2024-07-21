@@ -204,19 +204,27 @@ void lock_pairs(void)
 void print_winner(void)
 {
     // TODO
+    int p = 0;
     for (int i = 0; i < candidate_count; i++)
     {
         for (int j = 0; j < candidate_count; j++)
-        if (locked[i][j] == true)
         {
-            for (int k = 0; k < candidate_count; k++)
-            {
-                if (locked[k][i] == true)
-                {
-                    break;
-                }
-            }
+             if (locked[i][j] == true)
+             {
+                 for (int k = 0; k < candidate_count; k++)
+                     {
+                         if (locked[k][i] == false)
+                             {
+                                 p++;
+                             }
+                     }
+                     if (p == candidate_count)
+                     {
+                        pritnf("%s\n", candidates[i])
+                     }
+             }
         }
+
     }
     return;
 }
