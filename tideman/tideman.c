@@ -154,13 +154,15 @@ void sort_pairs(void)
     // TODO
     pair tmp;
     tmp.winner = 0;
-    for (int i = 0; i < pair_count; i++)
+    for (int i = 0; i < pair_count - 1; i++)
     {
-        for(int j = i; j < pair_count; i++)
+        for(int j = i + 1; j < pair_count; i++)
         {
-            if (pairs[j].winner >tmp.winner)
+            if (pairs[j].winner > pairs[i].winner)
             {
-                tmp = pairs[j].winner
+                tmp.winner = pairs[j].winner;
+                pairs[j].winner = pairs[i].winner;
+                pairs[i].winner = tmp.winner;
             }
         }
     }
