@@ -187,10 +187,13 @@ void lock_pairs(void)
                 if (locked[j][k] == ture)
                 {
                     j = k;
-                    continue;
+                    if (j == tmp)
+                    {
+                        locked[pairs[i].winner][pairs[i].lower] = false;
+                        return;
+                    }
                 }
             }
-
         }
     }
     return;
