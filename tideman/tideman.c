@@ -6,7 +6,7 @@
 #define MAX 9
 
 // preferences[i][j] is number of voters who prefer i over j
-int preferences[MAX][MAX];
+int preferences[MAX][MAX] = {0};
 
 // locked[i][j] means i is locked in over j
 bool locked[MAX][MAX];
@@ -118,7 +118,7 @@ void record_preferences(int ranks[])
     for (int i = 0; i < candidate_count; i++)
     {
         for (int j = i + 1; j < candidate_count; j++)
-        preferences[ranks[i]][ranks[j]] 
+        preferences[ranks[i]][ranks[j]] ++;
     }
     return;
 }
