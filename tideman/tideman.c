@@ -181,11 +181,11 @@ void lock_pairs(void)
         locked[pairs[i].winner][pairs[i].lower] = true;
         for (int j = 0; j < candidate_count; j++)
         {
+            int tmp = j;
             for (int k = 0; k < candidate_count; k++)
             {
                 if (locked[j][k] == ture)
                 {
-                    tmp = j;
                     j = k;
                 }
             }
