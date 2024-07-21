@@ -184,6 +184,10 @@ void lock_pairs(void)
             for (int k = 0; k < candidate_count; k++)
             {
                 if (locked[j][k] == ture)
+                {
+                    tmp = j;
+                    j = k;
+                }
             }
 
         }
