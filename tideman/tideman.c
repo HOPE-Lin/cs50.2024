@@ -178,6 +178,7 @@ void lock_pairs(void)
     // TODO
     for (int i = 0; i < pair_count - 1; i++)
     {
+        for
         locked[pairs[i].winner][pairs[i].lower] = true;
     }
     return;
