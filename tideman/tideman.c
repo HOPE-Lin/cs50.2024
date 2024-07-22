@@ -244,6 +244,7 @@ void dfs(int i, int room[])
             else if (room[j] == -1)
             {
                 a = false;
+                return;
             }
         }
     }
