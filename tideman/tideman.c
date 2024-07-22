@@ -217,12 +217,14 @@ void print_winner(void)
 }
 void dfs(int i)
 {
-    int H[candidate_count];
+    int H[candidate_count], p = 0;
     for(int j = 0; j < candidate_count; j++)
     {
         if (locked[i][j] == true)
         {
             dfs(j);
+            H[p] = i;
+            p++;
         }
     }
 }
