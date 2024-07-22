@@ -191,6 +191,7 @@ void lock_pairs(void)
         {
             if (room[p] == 0)
             {
+                a = true;
                  dfs(p, room);
             }
         }
