@@ -230,7 +230,7 @@ void print_winner(void)
 }
 void dfs(int i, int room[], int a, int b)
 {
-    if(w = 1)
+    if(w == 1)
          return;
     int j = 0;
     room[i] = 1;
