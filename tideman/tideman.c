@@ -182,7 +182,11 @@ void lock_pairs(void)
     for (int i = 0; i < pair_count; i++)
     {
         locked[pairs[i].winner][pairs[i].loser] = true;
-        locked[pairs[i].winner][pairs[i].loser] = dfs(0);
+        for (p; p < candidate_count; p++)
+        {
+            if ()
+            locked[pairs[i].winner][pairs[i].loser] = dfs(p)
+        }
     }
     return;
 }
