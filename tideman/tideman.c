@@ -225,7 +225,7 @@ int p = 0;
 int H[MAX] = {-1};
 bool dfs(int i)
 {
-
+    if ()
     for(int j = 0; j < candidate_count; j++)
     {
         if (locked[i][j] == true)
