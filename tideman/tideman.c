@@ -220,7 +220,7 @@ void dfs(int i)
     int H[candidate_count][candidate_count];
     for(int j = 0; j < candidate_count; j++)
     {
-        if (locked[][j] == true)
+        if (locked[i][j] == true)
         {
             dfs(j);
         }
