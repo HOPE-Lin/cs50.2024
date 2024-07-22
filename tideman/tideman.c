@@ -32,7 +32,6 @@ void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
 void print_winner(void);
-bool dfs(int i);
 
 int main(int argc, string argv[])
 {
