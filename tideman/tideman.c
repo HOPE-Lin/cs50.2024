@@ -220,30 +220,3 @@ void print_winner(void)
     }
     return;
 }
-int p = 0;
-int H[MAX] = {-1};
-bool dfs(int i)
-{
-    for(int j = 0; j < candidate_count; j++)
-    {
-        if (locked[i][j] == true)
-        {
-            H[p] = i;
-            p++;
-            for (int k = 0; k < p; k++)
-            {
-                if (j == H[k])
-                {
-                    return false;
-                }
-            }
-            dfs(j);
-        }
-    }
-    p = 0;
-    for (int l = 0;l < candidate_count; l++)
-    {
-        H[l] = -1;
-    }
-    return true;
-}
