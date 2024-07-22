@@ -226,3 +226,12 @@ void print_winner(void)
     }
     return;
 }
+bool dfs(int i, int room[])
+{
+    int j = 0;
+    room[i] = 1;
+    for (j = 0; j < candidate_count; j++)
+    {
+        if ()
+    }
+}
