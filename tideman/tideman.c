@@ -232,6 +232,12 @@ bool dfs(int i, int room[])
     room[i] = 1;
     for (j = 0; j < candidate_count; j++)
     {
-        if ()
+        if (locked[i][j] == true)
+        {
+            if (room[j] == 0)
+            {
+                
+            }
+        }
     }
 }
