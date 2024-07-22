@@ -242,6 +242,9 @@ bool dfs(int i)
         }
     }
     p = 0;
-    H[MAX] = {-1};
+    for (int i = 0;i < candidate_count; i++)
+    {
+        H[i] = -1;
+    }
     return true;
 }
