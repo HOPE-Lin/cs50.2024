@@ -244,5 +244,5 @@ bool dfs(int i, int room[])
             }
         }
     }
-    
+    room[i] = -1;
 }
