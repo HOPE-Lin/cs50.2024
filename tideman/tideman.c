@@ -195,7 +195,7 @@ void lock_pairs(void)
                 dfs(p, room, pairs[i].winner, pairs[i].loser);
                 if (w == 1)
                 {
-                    continue;
+                    break;
                 }
             }
         }
