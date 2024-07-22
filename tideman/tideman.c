@@ -194,7 +194,6 @@ void lock_pairs(void)
                 dfs(p, room，looked);
             }
         }
-        locked[pairs[i].winner][pairs[i].loser] = a;
     }
     return;
 }
@@ -228,7 +227,7 @@ void print_winner(void)
     }
     return;
 }
-void dfs(int i, int room[])
+void dfs(int i, int room[], int locked[][])
 {
     int j = 0;
     room[i] = 1;
@@ -242,7 +241,7 @@ void dfs(int i, int room[])
             }
             else if (room[j] == -1)
             {
-                a = false;
+                locked[pairs[i].winner][pairs[i].loser] = false;
                 return;
             }
         }
