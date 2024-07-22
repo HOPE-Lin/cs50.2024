@@ -181,7 +181,7 @@ void lock_pairs(void)
     for (int i = 0; i < pair_count; i++)
     {
         locked[pairs[i].winner][pairs[i].loser] = true;
-        dfs()
+        dfs(0);
     }
     return;
 }
@@ -217,6 +217,7 @@ void print_winner(void)
 }
 void dfs(int i)
 {
+    int H[candidate_count][candidate_count];
     for(int j = 0; j < candidate_count; j++)
     {
         if (locked[][j] == true)
