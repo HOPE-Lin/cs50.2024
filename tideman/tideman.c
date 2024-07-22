@@ -190,7 +190,7 @@ void lock_pairs(void)
         {
             if (room[p] == 0)
             {
-                dfs(p, room，pairs[i].winner, pairs[i].loser);
+                dfs(p, room, pairs[i].winner, pairs[i].loser);
             }
         }
     }
