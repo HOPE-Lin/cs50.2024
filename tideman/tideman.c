@@ -179,6 +179,7 @@ void lock_pairs(void)
     // TODO
     int p = 0;
     int room[candidate_count];
+    bool a = true;
     for (int i = 0; i < pair_count; i++)
     {
         locked[pairs[i].winner][pairs[i].loser] = true;
@@ -190,10 +191,11 @@ void lock_pairs(void)
         {
             if (room[p] == 0)
             {
-                dfs(p, room);
+                a = dfs(p, room);
             }
         }
     }
+    locked[pairs[i].winner][pairs[i].loser] = a;
     return;
 }
 
