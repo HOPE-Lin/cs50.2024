@@ -246,7 +246,7 @@ void dfs(int i, int room[], int a, int b)
             {
                 dfs(j, room,a,b);
             }
-            else if (room[j] == -1)
+            else if (room[j] == 1)
             {
                 locked[a][b] = false;
                 w = 1;
