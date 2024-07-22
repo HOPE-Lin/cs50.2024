@@ -32,7 +32,7 @@ void record_preferences(int ranks[]);
 void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
-void print_winner(void);void dfs(int i, int room[]);
+void print_winner(void);void dfs(int i, int room[], int locked[][]);
 
 int main(int argc, string argv[])
 {
@@ -191,7 +191,7 @@ void lock_pairs(void)
         {
             if (room[p] == 0)
             {
-                dfs(p, room，looked);
+                dfs(p, room, locked);
             }
         }
     }
