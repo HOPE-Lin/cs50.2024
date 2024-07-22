@@ -32,6 +32,7 @@ void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
 void print_winner(void);
+bool dfs(int i);
 
 int main(int argc, string argv[])
 {
@@ -181,7 +182,7 @@ void lock_pairs(void)
     for (int i = 0; i < pair_count; i++)
     {
         locked[pairs[i].winner][pairs[i].loser] = true;
-        dfs(0);
+        locked[pairs[i].winner][pairs[i].loser] = dfs(0);
     }
     return;
 }
@@ -234,4 +235,5 @@ bool dfs(int i)
             dfs(j);
         }
     }
+    return true;
 }
