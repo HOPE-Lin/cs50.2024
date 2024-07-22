@@ -186,7 +186,6 @@ void lock_pairs(void)
         {
             if (dfs(p) == false)
             locked[pairs[i].winner][pairs[i].loser] = false;
-            return;
         }
     }
     return;
