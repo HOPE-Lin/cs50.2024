@@ -236,7 +236,7 @@ bool dfs(int i, int room[])
         {
             if (room[j] == 0)
             {
-                
+                dfs
             }
         }
     }
