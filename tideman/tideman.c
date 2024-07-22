@@ -226,7 +226,7 @@ void print_winner(void)
     }
     return;
 }
-void dfs(int i, int room[],int a, int b)
+void dfs(int i, int room[], int a, int b)
 {
     int j = 0;
     room[i] = 1;
