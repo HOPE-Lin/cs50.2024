@@ -242,9 +242,9 @@ bool dfs(int i)
         }
     }
     p = 0;
-    for (int i = 0;i < candidate_count; i++)
+    for (int l = 0;l < candidate_count; l++)
     {
-        H[i] = -1;
+        H[l] = -1;
     }
     return true;
 }
