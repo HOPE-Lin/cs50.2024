@@ -178,13 +178,13 @@ void lock_pairs(void)
 {
     // TODO
     int p = 0;
+    int 
     for (int i = 0; i < pair_count; i++)
     {
         locked[pairs[i].winner][pairs[i].loser] = true;
         for (p = 0; p < candidate_count; p++)
         {
-            if (dfs(p) == false)
-            locked[pairs[i].winner][pairs[i].loser] = false;
+
         }
     }
     return;
