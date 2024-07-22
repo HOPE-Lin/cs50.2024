@@ -222,13 +222,13 @@ void dfs(int i)
     {
         if (locked[i][j] == true)
         {
-            dfs(j);
             H[p] = i;
             p++;
-        }
-        for (int k = 0; k < p - 1; k++)
-        {
-            if(j == H[p])
+            for (int k = 0; k < p; k++)
+            {
+                dfs(j);
+            }
+
         }
     }
 }
