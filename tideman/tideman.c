@@ -24,6 +24,7 @@ pair pairs[MAX * (MAX - 1) / 2];
 
 int pair_count;
 int candidate_count;
+int 
 
 // Function prototypes
 bool vote(int rank, string name, int ranks[]);
