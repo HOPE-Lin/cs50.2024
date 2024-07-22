@@ -228,7 +228,7 @@ void dfs(int i)
         }
         for (int k = 0; k < p - 1; k++)
         {
-            if(i == H[p])
+            if(j == H[p])
         }
     }
 }
