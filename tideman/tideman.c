@@ -24,7 +24,7 @@ pair pairs[MAX * (MAX - 1) / 2];
 
 int pair_count;
 int candidate_count;
-int 
+int w;
 
 // Function prototypes
 bool vote(int rank, string name, int ranks[]);
@@ -191,6 +191,7 @@ void lock_pairs(void)
         {
             if (room[p] == 0)
             {
+                w = 0;
                 dfs(p, room, pairs[i].winner, pairs[i].loser);
             }
         }
@@ -229,6 +230,8 @@ void print_winner(void)
 }
 void dfs(int i, int room[], int a, int b)
 {
+    if(w = 1)
+         return;
     int j = 0;
     room[i] = 1;
     for (j = 0; j < candidate_count; j++)
@@ -242,6 +245,7 @@ void dfs(int i, int room[], int a, int b)
             else if (room[j] == -1)
             {
                 locked[a][b] = false;
+                w = 1
                 return;
             }
         }
