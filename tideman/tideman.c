@@ -195,8 +195,8 @@ void lock_pairs(void)
                 a = dfs(p, room);
             }
         }
+        locked[pairs[i].winner][pairs[i].loser] = a;
     }
-    locked[pairs[i].winner][pairs[i].loser] = a;
     return;
 }
 
@@ -239,7 +239,7 @@ bool dfs(int i, int room[])
         {
             if (room[j] == 0)
             {
-                dfs(j, room)
+                dfs(j, room);
             }
             else if (room[j] == -1)
             {
