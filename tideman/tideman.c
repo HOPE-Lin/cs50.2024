@@ -215,7 +215,7 @@ void print_winner(void)
     }
     return;
 }
-void dfs(int i)
+bool dfs(int i)
 {
     int H[candidate_count], p = 0;
     for(int j = 0; j < candidate_count; j++)
@@ -226,9 +226,12 @@ void dfs(int i)
             p++;
             for (int k = 0; k < p; k++)
             {
-                dfs(j);
+                if (j == H[k])
+                {
+                    return false;
+                }
             }
-
+            dfs(j);
         }
     }
 }
