@@ -32,7 +32,7 @@ void record_preferences(int ranks[]);
 void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
-void print_winner(void);void dfs(int i, int room[], int locked[][]);
+void print_winner(void);void dfs(int i, int room[], bool locked[][]);
 
 int main(int argc, string argv[])
 {
@@ -227,7 +227,7 @@ void print_winner(void)
     }
     return;
 }
-void dfs(int i, int room[], int locked[][])
+void dfs(int i, int room[], bool locked[][])
 {
     int j = 0;
     room[i] = 1;
