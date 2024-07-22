@@ -24,6 +24,7 @@ pair pairs[MAX * (MAX - 1) / 2];
 
 int pair_count;
 int candidate_count;
+bool a = 
 
 // Function prototypes
 bool vote(int rank, string name, int ranks[]);
@@ -180,7 +181,6 @@ void lock_pairs(void)
     // TODO
     int p = 0;
     int room[candidate_count];
-    bool a = true;
     for (int i = 0; i < pair_count; i++)
     {
         locked[pairs[i].winner][pairs[i].loser] = true;
