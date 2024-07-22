@@ -215,3 +215,13 @@ void print_winner(void)
     }
     return;
 }
+void dfs(int i)
+{
+    for(int j = 0; j < candidate_count; j++)
+    {
+        if (locked[][j] == true)
+        {
+            dfs(j);
+        }
+    }
+}
