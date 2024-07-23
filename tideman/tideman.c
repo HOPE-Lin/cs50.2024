@@ -32,7 +32,8 @@ void record_preferences(int ranks[]);
 void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
-void print_winner(void);void dfs(int i, int room[],int a, int b);
+void print_winner(void);
+void dfs(int i, int room[], int a, int b);
 
 int main(int argc, string argv[])
 {
@@ -119,7 +120,7 @@ void record_preferences(int ranks[])
     for (int i = 0; i < candidate_count; i++)
     {
         for (int j = i + 1; j < candidate_count; j++)
-        preferences[ranks[i]][ranks[j]] ++;
+            preferences[ranks[i]][ranks[j]]++;
     }
     return;
 }
@@ -132,13 +133,13 @@ void add_pairs(void)
     {
         for (int j = i + 1; j < candidate_count; j++)
         {
-            if(preferences[i][j] > preferences[j][i])
+            if (preferences[i][j] > preferences[j][i])
             {
                 pairs[pair_count].winner = i;
                 pairs[pair_count].loser = j;
                 pair_count++;
             }
-            if(preferences[j][i] > preferences[i][j])
+            if (preferences[j][i] > preferences[i][j])
             {
                 pairs[pair_count].winner = j;
                 pairs[pair_count].loser = i;
@@ -158,9 +159,10 @@ void sort_pairs(void)
     tmp.loser = 0;
     for (int i = 0; i < pair_count - 1; i++)
     {
-        for(int j = i + 1; j < pair_count; j++)
+        for (int j = i + 1; j < pair_count; j++)
         {
-            if (preferences[pairs[j].winner][pairs[j].loser] > preferences[pairs[i].winner][pairs[i].loser])
+            if (preferences[pairs[j].winner][pairs[j].loser] >
+                preferences[pairs[i].winner][pairs[i].loser])
             {
                 tmp.winner = pairs[j].winner;
                 tmp.loser = pairs[j].loser;
@@ -212,30 +214,30 @@ void print_winner(void)
     {
         for (int j = 0; j < candidate_count; j++)
         {
-             if (locked[i][j] == true)
-             {
-                 for (int k = 0; k < candidate_count; k++)
-                 {
-                      if (locked[k][i] == false)
-                      {
-                          p++;
-                      }
-                 }
-                 if (p == candidate_count)
-                 {
-                      printf("%s\n", candidates[i]);
-                      return;
-                 }
-                 p = 0;
-             }
+            if (locked[i][j] == true)
+            {
+                for (int k = 0; k < candidate_count; k++)
+                {
+                    if (locked[k][i] == false)
+                    {
+                        p++;
+                    }
+                }
+                if (p == candidate_count)
+                {
+                    printf("%s\n", candidates[i]);
+                    return;
+                }
+                p = 0;
+            }
         }
     }
     return;
 }
 void dfs(int i, int room[], int a, int b)
 {
-    if(w == 1)
-         return;
+    if (w == 1)
+        return;
     int j = 0;
     room[i] = 1;
     for (j = 0; j < candidate_count; j++)
@@ -244,7 +246,7 @@ void dfs(int i, int room[], int a, int b)
         {
             if (room[j] == 0)
             {
-                dfs(j, room,a,b);
+                dfs(j, room, a, b);
             }
             else if (room[j] == 1)
             {
