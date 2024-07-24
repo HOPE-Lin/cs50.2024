@@ -86,7 +86,19 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             if (i == 0 && j == 0)
             {
             }
-            p = copy[i - 1][j - 1].rgbtRed + copy[i - 1][j].rgbtRed + copy[i - 1][j + 1].rgbtRed +
+            if (i == height - 1 && j == height - 1)
+            {
+
+            }
+            if (i == 0 && j == height - 1)
+            {
+
+            }
+            if (i == height - 1 && j == height - 1)
+            {
+                
+            }
+             p = copy[i - 1][j - 1].rgbtRed + copy[i - 1][j].rgbtRed + copy[i - 1][j + 1].rgbtRed +
                 copy[i][j - 1].rgbtRed + copy[i][j].rgbtRed + copy[i][j + 1].rgbtRed +
                 copy[i + 1][j - 1].rgbtRed + copy[i + 1][j].rgbtRed + copy[i + 1][j + 1].rgbtRed;
                 image[i][j].rgbtRed = round(p / 9);
