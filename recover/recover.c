@@ -19,21 +19,22 @@ int main(int argc, char *argv[])
     uint8_t buffer[512];
     int i = 0;
     char filename[4];
+    FILE *img;
     while (fread(buffer, 1, 512, card) == 512)
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
             sprintf(filename, "%03i.jpg", i);
-            fopen(filename, "w");
-            fwrite(buffer, 1 , 512, &filename);
+            img = fopen(filename, "w");
+            fwrite(buffer, 1 , 512, img);
             i++;
-            fclose(filename);
+            fclose(img);
         }
         else
         {
-            fopen(filename, "w');
-            fwrite(buffer, 1 , 512, &filename);
-            fclose(filename);
+            fopen(img, "w");
+            fwrite(buffer, 1 , 512, img);
+            fclose(img);
         }
     }
     fclose(card);
