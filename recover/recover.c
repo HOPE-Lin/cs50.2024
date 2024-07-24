@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
     {
         if (buffer[1] == 0xff && buffer[2] == 0xd8 && bufffer[3] == 0xff && (buffer[4] & 0xe0) == 0xe0)
         {
-            
+            fwrite(buffer, 1 , 512,)
         }
     }
 }
