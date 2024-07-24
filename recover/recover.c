@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
         return 1;
     }
     FILE *card = fopen(argv[1], "r");
-    if (card == null)
+    if (card == NULL)
     {
         printf("");
         return 1;
