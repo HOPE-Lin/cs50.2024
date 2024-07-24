@@ -127,12 +127,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
                 for (int l = j - 1; l < j + 2; l++)
                 {
-                    redx += copy[k][l].rgbtRed * gx[k - i + 1][k - l + 1];
-                    greenx += copy[k][l].rgbtGreen * gx[k - i + 1][k - l + 1];
-                    bluex += copy[k][l].rgbtBlue * gx[k - i + 1][k - l + 1];
-                    redy += copy[k][l].rgbtRed * gx[k - l + 1][k - i + 1];
-                    greeny += copy[k][l].rgbtGreen * gx[k - l + 1][k - i + 1];
-                    bluey += copy[k][l].rgbtBlue * gx[k - l + 1][k - i + 1];
+                    redx += copy[k][l].rgbtRed * gx[k - i + 1][l - j + 1];
+                    greenx += copy[k][l].rgbtGreen * gx[k - i + 1][l - j + 1];
+                    bluex += copy[k][l].rgbtBlue * gx[k - i + 1][l - j + 1];
+                    redy += copy[k][l].rgbtRed * gx[l - j + 1][k - i + 1];
+                    greeny += copy[k][l].rgbtGreen * gx[l - j + 1][k - i + 1];
+                    bluey += copy[k][l].rgbtBlue * gx[l - j + 1][k - i + 1];
                 }
             }
             p = round((double) sqrt(pow(redx, 2.0) + pow(redy, 2.0)));
