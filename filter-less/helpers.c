@@ -71,29 +71,37 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     int p = 0;
-    RGBTRIPLE copy[height][width];
+    RGBTRIPLE copy[height + 2][width + 2] = {0};
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
-            copy[i][j] = image[i][j];
+            copy[i + 1][j + 1] = image[i][j];
         }
     }
-    for (int i = 1; i < height - 1; i++)
+    for (int i = 1; i < height + 1; i++)
     {
-        for (int j = 1; j < width - 1; j++)
+        for (int j = 1; j < width + 1; j++)
         {
             p = copy[i - 1][j - 1].rgbtRed + copy[i - 1][j].rgbtRed + copy[i - 1][j + 1].rgbtRed +
                 copy[i][j - 1].rgbtRed + copy[i][j].rgbtRed + copy[i][j + 1].rgbtRed
                 copy[i + 1][j - 1].rgbtRed + copy[i + 1][j].rgbtRed + copy[i + 1][j + 1].rgbtRed;
-             p = copy[i - 1][j - 1].rgbtRed + copy[i - 1][j].rgbtRed + copy[i - 1][j + 1].rgbtRed +
-                copy[i][j - 1].rgbtRed + copy[i][j].rgbtRed + copy[i][j + 1].rgbtRed
-                copy[i + 1][j - 1].rgbtRed + copy[i + 1][j].rgbtRed + copy[i + 1][j + 1].rgbtRed;
                 copy[i][j].rgbtRed = round(p);
-             p = copy[i - 1][j - 1].rgbtRed + copy[i - 1][j].rgbtRed + copy[i - 1][j + 1].rgbtRed +
-                copy[i][j - 1].rgbtRed + copy[i][j].rgbtRed + copy[i][j + 1].rgbtRed
-                copy[i + 1][j - 1].rgbtRed + copy[i + 1][j].rgbtRed + copy[i + 1][j + 1].rgbtRed;
-                copy[i][j].rgbtRed = round(p);
+            p = copy[i - 1][j - 1].rgbtGreen + copy[i - 1][j].rgbtRGreen + copy[i - 1][j + 1].rgbtRGreen +
+                copy[i][j - 1].rgbtGreen + copy[i][j].rgbtGreen + copy[i][j + 1].rgbtGreen
+                copy[i + 1][j - 1].rgbtGreen + copy[i + 1][j].rgbtGreen + copy[i + 1][j + 1].rgbtGreen;
+                copy[i][j].rgbtGreen = round(p);
+            p = copy[i - 1][j - 1].rgbtBlue + copy[i - 1][j].rgbtBlue + copy[i - 1][j + 1].rgbtBlue +
+                copy[i][j - 1].rgbtBlue + copy[i][j].rgbtBlue + copy[i][j + 1].rgbtBlue
+                copy[i + 1][j - 1].rgbtBlue + copy[i + 1][j].rgbtBlue + copy[i + 1][j + 1].rgbtBlue;
+                copy[i][j].rgbtBlue = round(p);
+        }
+    }
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            image[i][j]copy[i + 1][j + 1] = ;
         }
     }
     return;
