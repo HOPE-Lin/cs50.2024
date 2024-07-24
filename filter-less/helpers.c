@@ -52,7 +52,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width / 2; j++)
         {
-            p = width - j;
+            p = width - j - 1;
             tmp.rgbtRed = image[i][j].rgbtRed;
             tmp.rgbtGreen = image[i][j].rgbtGreen;
             tmp.rgbtBlue = image[i][j].rgbtBlue;
@@ -70,46 +70,47 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    int p = 0;
-    RGBTRIPLE copy[height][width];
-    for (int i = 0; i < height; i++)
+    int p = 0, red = 0, green = 0, blue = 0;
+    RGBTRIPLE copy[height + 2][width + 2];
+    for (int i = 0; i < height + 2; i++)
     {
-        for (int j = 0; j < width; j++)
+        for (int j = 0; j < width + 2; j++)
         {
-            copy[i][j] = image[i - 1][j - 1];
+            if (i == 0 || j ==0 || i == height + 1 || j == height + 1)
+            {
+                copy[i][j].rgbtRed = 0;
+                copy[i][j].rgbtGreen = 0;
+                copy[i][j].rgbtBlue = 0;
+
+            }
+            else
+                copy[i][j] = image[i - 1][j - 1];
         }
     }
-    for (int i = 0; i < height; i++)
+    for (int i = 1; i < height + 1; i++)
     {
-        for (int j = 0; j < width; j++)
+        for (int j = 1; j < width + 1; j++)
         {
-            if (i == 0 && j == 0)
+            p = 0;
+            red = 0;
+            green = 0;
+            blue = 0;
+            for (int k = i - 1; k < i + 2;k++)
             {
+                for (int l = j - 1; l < j + 2; l++)
+                {
+                    if(k != 0 && k != height + 1 && l != 0 && l != width + 1)
+                    {
+                        p++;
+                        red += copy[k][l].rgbtRed;
+                        green +=copy[k][l].rgbtGreen;
+                        blue += copy[k][l].rgbtBlue;
+                    }
+                }
             }
-            if (i == height - 1 && j == height - 1)
-            {
-
-            }
-            if (i == 0 && j == height - 1)
-            {
-
-            }
-            if (i == height - 1 && j == height - 1)
-            {
-                
-            }
-             p = copy[i - 1][j - 1].rgbtRed + copy[i - 1][j].rgbtRed + copy[i - 1][j + 1].rgbtRed +
-                copy[i][j - 1].rgbtRed + copy[i][j].rgbtRed + copy[i][j + 1].rgbtRed +
-                copy[i + 1][j - 1].rgbtRed + copy[i + 1][j].rgbtRed + copy[i + 1][j + 1].rgbtRed;
-                image[i][j].rgbtRed = round(p / 9);
-            p = copy[i - 1][j - 1].rgbtGreen + copy[i - 1][j].rgbtGreen + copy[i - 1][j + 1].rgbtGreen +
-                copy[i][j - 1].rgbtGreen + copy[i][j].rgbtGreen + copy[i][j + 1].rgbtGreen +
-                copy[i + 1][j - 1].rgbtGreen + copy[i + 1][j].rgbtGreen + copy[i + 1][j + 1].rgbtGreen;
-                image[i][j].rgbtGreen = round(p / 9);
-            p = copy[i - 1][j - 1].rgbtBlue + copy[i - 1][j].rgbtBlue + copy[i - 1][j + 1].rgbtBlue +
-                copy[i][j - 1].rgbtBlue + copy[i][j].rgbtBlue + copy[i][j + 1].rgbtBlue +
-                copy[i + 1][j - 1].rgbtBlue + copy[i + 1][j].rgbtBlue + copy[i + 1][j + 1].rgbtBlue;
-                image[i][j].rgbtBlue = round(p / 9);
+            image[i][j].rgbtRed = round(red / (double)p);
+            image[i][j].rgbtGreen = round(green / (double)p);
+            image[i][j].rgbtBlue = round(blue / (double)p);
         }
     }
     return;
