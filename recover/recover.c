@@ -30,7 +30,8 @@ int main(int argc, char *argv[])
         }
         else
         {
-        
+            fopen(filename, "w');
+            fwrite(buffer, 1 , 512, filename);
         }
     }
 }
