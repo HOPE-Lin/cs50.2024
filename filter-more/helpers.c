@@ -136,8 +136,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
             p = round((double) sqrt(pow(redx, 2.0) + pow(redy, 2.0)));
-            q = round((double) sqrt((greenx) * (greenx) + (greeny) * (greeny)));
-            w = round((double) sqrt((bluex) * (bluex) + (bluey) * bluey));
+            q = round((double) sqrt(greenx * greenx + greeny * greeny));
+            w = round((double) sqrt(bluex * bluex + bluey * bluey));
             if (p > 255)
                 p = 255;
             if (q > 255)
