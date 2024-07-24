@@ -26,9 +26,11 @@ int main(int argc, char *argv[])
             fopen(filename, "w');
             fwrite(buffer, 1 , 512, filename);
             i++;
+            fclose(filename);
         }
         else
         {
+        
         }
     }
 }
