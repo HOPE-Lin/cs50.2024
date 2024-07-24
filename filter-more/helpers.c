@@ -94,6 +94,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     int p = 0, red = 0, green = 0, blue = 0;
+    int gx[3][3] = {-1, 0 , 1, -2, 0, 2, -1, 0, 1};
     RGBTRIPLE copy[height + 2][width + 2];
     for (int i = 0; i < height + 2; i++)
     {
@@ -121,13 +122,10 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
                 for (int l = j - 1; l < j + 2; l++)
                 {
-                    if (k != 0 && k != height + 1 && l != 0 && l != width + 1)
-                    {
                         p++;
-                        red += copy[k][l].rgbtRed;
+                        red += copy[k][l].rgbtRed * gx[];
                         green += copy[k][l].rgbtGreen;
                         blue += copy[k][l].rgbtBlue;
-                    }
                 }
             }
             image[i - 1][j - 1].rgbtRed = round(red / (double) p);
