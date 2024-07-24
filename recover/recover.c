@@ -15,5 +15,6 @@ int main(int argc, char *argv[])
         return 1;
     }
     uint8_t buffer[512];
-    while (fread(buffer, 1, 512, car))
+    while (fread(buffer, 1, 512, card) == 512)
+    {}
 }
