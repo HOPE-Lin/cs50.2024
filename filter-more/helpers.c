@@ -93,7 +93,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 // Detect edges
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
-    int redx = 0, greenx = 0, bluex = 0, redy = 0, greeny = 0, bluey = 0;
+    int redx = 0, greenx = 0, bluex = 0, redy = 0, greeny = 0, bluey = 0,p, q, w;
     int gx[3][3] = {{-1, 0 , 1}, {-2, 0, 2}, {-1, 0, 1}};
     RGBTRIPLE copy[height + 2][width + 2];
     for (int i = 0; i < height + 2; i++)
@@ -120,6 +120,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             redy = 0;
             greeny = 0;
             bluey = 0;
+            p = 0;
+            q = 0;
+            w = 0;
             for (int k = i - 1; k < i + 2; k++)
             {
                 for (int l = j - 1; l < j + 2; l++)
@@ -132,18 +135,18 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     bluey += copy[k][l].rgbtBlue * gx[k - l + 1][k - i + 1];
                 }
             }
-            redx = round(sqrt((redx / 9.0) * (redx / 9.0) + (redy / 9.0) * (redy / 9.0)));
-            greenx = round(sqrt((greenx / 9.0) * (greenx / 9.0) + (greeny / 9.0) * (greeny / 9.0)));
-            bluex = round(sqrt((bluex / 9.0) * (bluex / 9.0) + (bluey / 9.0) * (bluey / 9.0)));
-            if (redx > 255)
-                redx = 255;
-            if (greenx > 255)
-                greenx = 255;
-            if (bluex > 255)
-                bluex = 255;
-           image[i - 1][j - 1].rgbtRed = redx;
-           image[i - 1][j - 1].rgbtGreen = greenx;
-           image[i - 1][j - 1].rgbtBlue = bluex;
+            p = round(sqrt((redx / 9.0) * (redx / 9.0) + (redy / 9.0) * (redy / 9.0)));
+            q = round(sqrt((greenx / 9.0) * (greenx / 9.0) + (greeny / 9.0) * (greeny / 9.0)));
+            w = round(sqrt((bluex / 9.0) * (bluex / 9.0) + (bluey / 9.0) * (bluey / 9.0)));
+            if (p > 255)
+                p = 255;
+            if (q > 255)
+                q = 255;
+            if (w > 255)
+                w = 255;
+           image[i - 1][j - 1].rgbtRed = p;
+           image[i - 1][j - 1].rgbtGreen = q;
+           image[i - 1][j - 1].rgbtBlue = w;
         }
     }
     return;
