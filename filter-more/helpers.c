@@ -93,7 +93,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 // Detect edges
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
-    int p = 0, red = 0, green = 0, blue = 0;
+    int p = 0, redx = 0, greenx = 0, bluex = 0，redy = 0, greeny = 0, bluey = 0;
     int gx[3][3] = {-1, 0 , 1, -2, 0, 2, -1, 0, 1};
     RGBTRIPLE copy[height + 2][width + 2];
     for (int i = 0; i < height + 2; i++)
@@ -122,13 +122,15 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
                 for (int l = j - 1; l < j + 2; l++)
                 {
-                        p++;
-                        red += copy[k][l].rgbtRed * gx[];
-                        green += copy[k][l].rgbtGreen;
-                        blue += copy[k][l].rgbtBlue;
+                    redx += copy[k][l].rgbtRed * gx[k - i + 1][k - l + 1];
+                    greenx += copy[k][l].rgbtGreen * gx[k - i + 1][k - l + 1];
+                    bluex += copy[k][l].rgbtBlue * gx[k - i + 1][k - l + 1];
+                    redy += copy[k][l].rgbtRed * gx[k - l + 1][k - i + 1];
+                    greeny += copy[k][l].rgbtGreen * gx[k - l + 1][k - i + 1];
+                    bluey += copy[k][l].rgbtBlue * gx[k - l + 1][k - i + 1];
                 }
             }
-            image[i - 1][j - 1].rgbtRed = round(red / (double) p);
+            image[i - 1][j - 1].rgbtRed = round(red / );
             image[i - 1][j - 1].rgbtGreen = round(green / (double) p);
             image[i - 1][j - 1].rgbtBlue = round(blue / (double) p);
         }
