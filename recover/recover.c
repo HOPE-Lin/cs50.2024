@@ -14,4 +14,6 @@ int main(int argc, char *argv[])
         printf("");
         return 1;
     }
+    uint8_t buffer[512];
+    while (fread(buffer, 1, 512, car))
 }
