@@ -70,6 +70,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+    int p = 0;
     RGBTRIPLE copy[height][width];
     for (int i = 0; i < height; i++)
     {
@@ -78,10 +79,14 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             copy[i][j] = image[i][j];
         }
     }
-    for (int i = 0; i < height; i++)
+    for (int i = 1; i < height - 1; i++)
     {
-        for (int j = 0; j < width; j++)
+        for (int j = 1; j < width - 1; j++)
         {
+            p = copy[i - 1][j - 1].rgbtRed + copy[i - 1][j].rgbtRed + copy[i - 1][j + 1].rgbtRed +
+                copy[i][j - 1].rgbtRed + copy[i][j].rgbtRed + copy[i][j + 1].rgbtRed
+                copy[i + 1][j - 1].rgbtRed + copy[i + 1][j].rgbtRed + copy[i + 1][j + 1].rgbtRed;
+                
         }
     }
     return;
