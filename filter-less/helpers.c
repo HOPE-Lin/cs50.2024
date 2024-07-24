@@ -26,9 +26,12 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            sepiaRed = round(0.393 * image[i][j].rgbtRed + 0.769 * image[i][j].rgbtGreen + 0.189 * image[i][j].rgbtBlue);
-            sepiaGreen =  round(0.349 * image[i][j].rgbtRed + 0.686 * image[i][j].rgbtGreen + 0.168 * image[i][j].rgbtBlue);
-            sepiaBlue =  round(0.272 * image[i][j].rgbtRed + 0.534 * image[i][j].rgbtGreen + 0.131 * image[i][j].rgbtBlue);
+            sepiaRed = round(0.393 * image[i][j].rgbtRed + 0.769 * image[i][j].rgbtGreen +
+                             0.189 * image[i][j].rgbtBlue);
+            sepiaGreen = round(0.349 * image[i][j].rgbtRed + 0.686 * image[i][j].rgbtGreen +
+                               0.168 * image[i][j].rgbtBlue);
+            sepiaBlue = round(0.272 * image[i][j].rgbtRed + 0.534 * image[i][j].rgbtGreen +
+                              0.131 * image[i][j].rgbtBlue);
             if (sepiaBlue > 255)
                 sepiaBlue = 255;
             if (sepiaGreen > 255)
@@ -76,12 +79,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width + 2; j++)
         {
-            if (i == 0 || j ==0 || i == height + 1 || j == width + 1)
+            if (i == 0 || j == 0 || i == height + 1 || j == width + 1)
             {
                 copy[i][j].rgbtRed = 0;
                 copy[i][j].rgbtGreen = 0;
                 copy[i][j].rgbtBlue = 0;
-
             }
             else
                 copy[i][j] = image[i - 1][j - 1];
@@ -95,22 +97,22 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             red = 0;
             green = 0;
             blue = 0;
-            for (int k = i - 1; k < i + 2;k++)
+            for (int k = i - 1; k < i + 2; k++)
             {
                 for (int l = j - 1; l < j + 2; l++)
                 {
-                    if(k != 0 && k != height + 1 && l != 0 && l != width + 1)
+                    if (k != 0 && k != height + 1 && l != 0 && l != width + 1)
                     {
                         p++;
                         red += copy[k][l].rgbtRed;
-                        green +=copy[k][l].rgbtGreen;
+                        green += copy[k][l].rgbtGreen;
                         blue += copy[k][l].rgbtBlue;
                     }
                 }
             }
-            image[i - 1][j - 1].rgbtRed = round(red / (double)p);
-            image[i - 1][j - 1].rgbtGreen = round(green / (double)p);
-            image[i - 1][j - 1].rgbtBlue = round(blue / (double)p);
+            image[i - 1][j - 1].rgbtRed = round(red / (double) p);
+            image[i - 1][j - 1].rgbtGreen = round(green / (double) p);
+            image[i - 1][j - 1].rgbtBlue = round(blue / (double) p);
         }
     }
     return;
