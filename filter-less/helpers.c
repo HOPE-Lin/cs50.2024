@@ -94,7 +94,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 copy[i][j - 1].rgbtRed + copy[i][j].rgbtRed + copy[i][j + 1].rgbtRed +
                 copy[i + 1][j - 1].rgbtRed + copy[i + 1][j].rgbtRed + copy[i + 1][j + 1].rgbtRed;
                 copy[i][j].rgbtRed = round(p);
-            p = copy[i - 1][j - 1].rgbtGreen + copy[i - 1][j].rgbtRGreen + copy[i - 1][j + 1].rgbtRGreen +
+            p = copy[i - 1][j - 1].rgbtGreen + copy[i - 1][j].rgbtGreen + copy[i - 1][j + 1].rgbtGreen +
                 copy[i][j - 1].rgbtGreen + copy[i][j].rgbtGreen + copy[i][j + 1].rgbtGreen +
                 copy[i + 1][j - 1].rgbtGreen + copy[i + 1][j].rgbtGreen + copy[i + 1][j + 1].rgbtGreen;
                 copy[i][j].rgbtGreen = round(p);
