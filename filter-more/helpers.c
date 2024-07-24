@@ -135,7 +135,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     bluey += copy[k][l].rgbtBlue * gx[k - l + 1][k - i + 1];
                 }
             }
-            p = round((double) sqrt(pow(redx / 9.0, 2.0) + pow(redy / 9.0, 2.0)));
+            p = round((double) sqrt(pow(redx, 2.0) + pow(redy, 2.0)));
             q = round((double) sqrt((greenx / 9.0) * (greenx / 9.0) + (greeny / 9.0) * (greeny / 9.0)));
             w = round((double) sqrt((bluex / 9.0) * (bluex / 9.0) + (bluey / 9.0) * (bluey / 9.0)));
             if (p > 255)
