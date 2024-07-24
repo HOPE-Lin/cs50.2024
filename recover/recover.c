@@ -16,5 +16,10 @@ int main(int argc, char *argv[])
     }
     uint8_t buffer[512];
     while (fread(buffer, 1, 512, card) == 512)
-    {}
+    {
+        if (buffer[1] == 0xff && buffer[2] == 0xd8 && bufffer[3] == 0xff && (buffer[4] & 0xe0) == 0xe0)
+        {
+            
+        }
+    }
 }
