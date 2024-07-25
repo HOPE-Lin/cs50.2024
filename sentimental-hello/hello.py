@@ -1,2 +1,2 @@
 s = input()
-print 
+print(f)
