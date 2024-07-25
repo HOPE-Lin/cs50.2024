@@ -44,7 +44,7 @@ bool load(const char *dictionary)
     char buffer[46];
     while (fscanf(source, "%s", buffer) != EOF)
     {
-
+        node =
     }
     fclose(source);
     return false;
