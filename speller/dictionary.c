@@ -50,7 +50,7 @@ bool load(const char *dictionary)
         i = buffer[0] - 'a';
         newnode->next = table[i]->next;
         table[i]->next = newnode;
-        strcmp()
+        strcpy(newnode->word, buffer);
     }
     fclose(source);
     return false;
