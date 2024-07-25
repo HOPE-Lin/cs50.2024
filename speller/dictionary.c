@@ -25,7 +25,7 @@ bool check(const char *word)
 {
     // TODO
     node* p;
-    int i = toupper(word[0]) - 'A';
+    int i = tolower(word[0]) - 'a';
     do
     {
         p = table[i];
@@ -43,7 +43,7 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    return tolower(word[0]) - 'A';
+    return tolower(word[0]) - 'a';
 }
 
 // Loads dictionary into memory, returning true if successful, else false
