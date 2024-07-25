@@ -97,7 +97,8 @@ bool unload(void)
                 free(p);
                 p = p->next;
             }
+            free(p);
         }
     }
-    return false;
+    return true;
 }
