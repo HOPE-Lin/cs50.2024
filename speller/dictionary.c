@@ -37,7 +37,7 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
-    FILE *source = fopen(dictionary);
+    FILE *source = fopen(dictionary, "r");
     int i = 0;
     if (source == NULL)
     {
@@ -48,6 +48,7 @@ bool load(const char *dictionary)
     {
         node* newnode = malloc(sizeof(node));
         i = buffer[0] - 'a';
+        if ()
         newnode->next = table[i]->next;
         table[i]->next = newnode;
         strcpy(newnode->word, buffer);
