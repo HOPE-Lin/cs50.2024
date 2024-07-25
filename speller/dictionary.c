@@ -41,7 +41,11 @@ bool load(const char *dictionary)
     {
         return false;
     }
-    while (f)
+    char buffer[46];
+    while (fscanf(source, "%s", buffer) != EOF)
+    {
+        
+    }
     fclose(source);
     return false;
 }
