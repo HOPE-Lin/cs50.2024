@@ -2,6 +2,7 @@
 
 #include <ctype.h>
 #include <stdbool.h>
+#include <string.h>
 
 #include "dictionary.h"
 
@@ -48,7 +49,8 @@ bool load(const char *dictionary)
         node* newnode = malloc(sizeof(node));
         i = buffer[0] - 'a';
         newnode->next = table[i]->next;
-        
+        table[i]->next = newnode;
+        strcmp()
     }
     fclose(source);
     return false;
