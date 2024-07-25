@@ -4,6 +4,7 @@
 #include <stdbool.h>
 #include <string.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 #include "dictionary.h"
 
@@ -36,7 +37,7 @@ bool check(const char *word)
         }
         p = p->next;
     }
-    while (p != NULL)
+    while (p != NULL);
     return false;
 }
 
@@ -51,7 +52,7 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
-    FILE *source = fopen(dictionary, "r");
+    FILE* source = fopen(dictionary, "r");
     int i = 0;
     if (source == NULL)
     {
