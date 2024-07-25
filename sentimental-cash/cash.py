@@ -13,4 +13,4 @@ while t >= 0.05:
 while t >= 0.01:
     t -= 1
     p += 1
-    print("", + p)
+    print(f"{p}")
