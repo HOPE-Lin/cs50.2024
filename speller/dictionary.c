@@ -90,6 +90,7 @@ bool unload(void)
         if (table[i] != NULL)
         {
             node *p = table[i];
+            node *q = p;
         }
     }
     return false;
