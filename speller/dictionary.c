@@ -49,7 +49,10 @@ unsigned int hash(const char *word)
     for (int i = 0; word[i] != '\0';i++)
     {
         if(word[i] == '\'')
+        {
             j += 97;
+            continue;
+        }
         j += (tolower(word[i]) - 'a') * i * 37;
     }
     return j % 500;
