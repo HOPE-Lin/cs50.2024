@@ -24,6 +24,13 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
+    node* p;
+    int i = toupper(word[0]) - 'A';
+    do
+    {
+        p = table[i];
+    }
+    while (p != NULL)
     return false;
 }
 
