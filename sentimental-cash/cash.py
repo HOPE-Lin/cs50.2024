@@ -1,5 +1,7 @@
 from cs50 import get_float
 t = get_float("Change: ")
+while t < 0:
+    t = get_float("Change: ")
 p = 0
 while t >= 0.25:
     t -= 0.25
