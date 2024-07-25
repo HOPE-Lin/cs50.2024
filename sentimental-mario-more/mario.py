@@ -8,5 +8,8 @@ for p in range(1, t + 1, 1):
         print(" ", end="")
     for _ in range(t):
         print("#", end="")
-    
+    print(" ", end="")
+    for _ in range(t):
+        print("#", end="")
+    print()
 
