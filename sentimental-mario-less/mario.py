@@ -6,9 +6,7 @@ while t > 8 or t <= 0:
 for p in range(1, t + 1, 1):
     s = t - p
     for _ in range(s):
-        print(" ", end = "");
-    for _ in range(s, t , 1):
-        print("#", end = "")
+        print(" ", end="")
+    for _ in range(s, t, 1):
+        print("#", end="")
     print()
-
-
