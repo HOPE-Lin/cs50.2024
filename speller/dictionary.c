@@ -27,7 +27,7 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
-    node* p;
+    node* p = NULL;
     int i = tolower(word[0]) - 'a';
     do
     {
