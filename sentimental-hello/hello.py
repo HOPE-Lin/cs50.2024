@@ -1,2 +1,2 @@
-s = input()
-print(f)
+s = input("what's your name?")
+print(f"hello, {s})
