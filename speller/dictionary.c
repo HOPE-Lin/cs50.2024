@@ -52,16 +52,9 @@ bool load(const char *dictionary)
         {
             return false;
         }
-        if (table[i] != NULL)
-        {
-            newnode->next = table[i]->next;
-            table[i]->next = newnode;
-            strcpy(newnode->word, buffer);
-        }
-        else
-        {
-            
-        }
+        newnode->next = table[i];
+        table[i] = newnode;
+        strcpy(newnode->word, buffer);
     }
     fclose(source);
     return true;
