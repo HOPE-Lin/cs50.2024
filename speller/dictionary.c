@@ -47,6 +47,8 @@ bool load(const char *dictionary)
     {
         node* newnode = malloc(sizeof(node));
         i = buffer[0] - 'a';
+        newnode->next = table[i]->next;
+        
     }
     fclose(source);
     return false;
