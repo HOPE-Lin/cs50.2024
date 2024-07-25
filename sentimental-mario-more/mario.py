@@ -6,10 +6,10 @@ for p in range(1, t + 1, 1):
     s = t - p
     for _ in range(s):
         print(" ", end="")
-    for _ in range(t):
+    for _ in range(p):
         print("#", end="")
-    print(" ", end="")
-    for _ in range(t):
+    print("  ", end="")
+    for _ in range(p):
         print("#", end="")
     print()
 
