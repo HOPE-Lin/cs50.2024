@@ -37,6 +37,7 @@ bool load(const char *dictionary)
 {
     // TODO
     FILE *source = fopen(dictionary);
+    int i = 0;
     if (source == NULL)
     {
         return false;
@@ -45,7 +46,7 @@ bool load(const char *dictionary)
     while (fscanf(source, "%s", buffer) != EOF)
     {
         node* newnode = malloc(sizeof(node));
-
+        i = buffer[0] - 'a';
     }
     fclose(source);
     return false;
