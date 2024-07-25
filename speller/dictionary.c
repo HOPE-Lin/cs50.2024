@@ -102,6 +102,7 @@ bool unload(void)
                 p = q;
             }
         }
+        table[i] = NULL;
     }
     return true;
 }
