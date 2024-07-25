@@ -63,7 +63,7 @@ bool load(const char *dictionary)
     while (fscanf(source, "%s", buffer) != EOF)
     {
         newnode = malloc(sizeof(node));
-        int i = hash(word);
+        i = hash(buffer);
         if (newnode == NULL)
         {
             return false;
