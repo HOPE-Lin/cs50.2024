@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <string.h>
+#include <stdlib.h>
 
 #include "dictionary.h"
 
@@ -57,9 +58,10 @@ bool load(const char *dictionary)
         return false;
     }
     char buffer[46];
+    node * newnode;
     while (fscanf(source, "%s", buffer) != EOF)
     {
-        node* newnode = malloc(sizeof(node));
+        newnode = malloc(sizeof(node));
         i = buffer[0] - 'a';
         if (newnode == NULL)
         {
