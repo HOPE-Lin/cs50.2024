@@ -5,6 +5,9 @@ if t > 8 and t < 0:
 for p in range(t):
     s = t - p
     for _ in range(s):
-        print("",end)
+        print("", end = "");
+    for _ in rang(s, t , 1):
+        print("#", end = "")
+    print()
 
 
