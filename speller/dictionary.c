@@ -89,7 +89,7 @@ bool unload(void)
     {
         if (table[i] != NULL)
         {
-            node *
+            node *p = table[i];
         }
     }
     return false;
