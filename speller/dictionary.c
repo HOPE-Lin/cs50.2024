@@ -29,7 +29,7 @@ bool check(const char *word)
     do
     {
         p = table[i];
-        if (strcasecmp(word, p->word))
+        if (strcasecmp(word, p->word) == 0)
         {
             return true;
         }
