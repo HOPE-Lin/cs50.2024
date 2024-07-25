@@ -28,7 +28,7 @@ bool check(const char *word)
 {
     // TODO
     node* p = NULL;
-    int i = tolower(word[0]) - 'a';
+    int i = hash(word);
     do
     {
         p = table[i];
