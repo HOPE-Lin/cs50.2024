@@ -29,6 +29,10 @@ bool check(const char *word)
     // TODO
     node* p = NULL;
     int i = hash(word);
+    if (table[i] == NULL)
+    {
+        return false;
+    }
     do
     {
         p = table[i];
