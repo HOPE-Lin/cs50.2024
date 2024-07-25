@@ -29,20 +29,15 @@ bool check(const char *word)
     // TODO
     node* p = NULL;
     int i = hash(word);
-    if (table[i] == NULL)
+    p = table[i];
+    while (p != NULL)
     {
-        return false;
-    }
-    do
-    {
-        p = table[i];
         if (strcasecmp(word, p->word) == 0)
         {
             return true;
         }
         p = p->next;
     }
-    while (p != NULL);
     return false;
 }
 
