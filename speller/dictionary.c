@@ -91,6 +91,12 @@ bool unload(void)
         {
             node *p = table[i];
             node *q = p;
+            while (q == NULL)
+            {
+                q = q->next;
+                free(p);
+                p = p->next;
+            }
         }
     }
     return false;
