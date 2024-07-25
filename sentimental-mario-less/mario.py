@@ -3,7 +3,7 @@ t = get_int("Height: ")
 while t > 8 and t < 0:
     t = get_int("Height: ")
 
-for p in range(t):
+for p in range(1, t + 1, 1):
     s = t - p
     for _ in range(s):
         print(" ", end = "");
