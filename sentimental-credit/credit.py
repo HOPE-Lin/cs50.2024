@@ -2,8 +2,8 @@ import re
 
 def is_even(s):
     t = len(s)
-    i = t
-    j = t - 1
+    i = t - 1
+    j = t - 2
     sum = 0
     while i >= 0:
         p = int(s[i]) * 2
