@@ -13,7 +13,7 @@ def is_even(s):
             sum += p
         i -= 2
     while j >= 0:
-        p = s[j]
+        p = int(s[j])
         sum += p
     if sum % 10 == 0:
         return True
