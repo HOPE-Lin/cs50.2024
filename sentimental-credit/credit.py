@@ -39,6 +39,8 @@ def main():
       #  if re.match("^(4)", s):
             #if is_credit(s):
         print("VISA")
+    elif t == 16 and re.match("^(4)", s) and is_credit(s):
+        print("VISA")
     else:
         print("INVALID")
 
