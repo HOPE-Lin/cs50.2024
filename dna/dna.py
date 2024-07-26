@@ -15,6 +15,7 @@ def main():
     with open(sys.argv[1], 'r') as file:
        # firster = file.readline()
         reader = csv.DictReader(file)
+        firster = next(reader)
         for row in reader:
             rows.append(row)
             i += 1
