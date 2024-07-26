@@ -37,7 +37,7 @@ def main():
         for j in range(k):
             print("longests[j]: ", longests[j])
             print("rows[p].values(): ", list(rows[p].values())[j + 1])
-            if longests[j] == int(list(rows[p].values())[j + 1]):
+            if longests[j] != int(list(rows[p].values())[j + 1]):
                  match_found = False
                  break
         if match_found:
