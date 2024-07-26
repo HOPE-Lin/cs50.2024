@@ -36,9 +36,7 @@ def main():
     for p in range(0, i, 1):
         l = 0
         for j in range(k):
-            if longests[j] != list(rows[p].values())[j + 1]:
-                break
-            else:
+            if longests[j] == list(rows[p].values())[j + 1]:
                 l += 1
         if l == k:
             print(f"{list(rows[p].keys())[0]}")
