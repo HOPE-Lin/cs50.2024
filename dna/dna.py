@@ -7,9 +7,13 @@ def main():
     # TODO: Check for command-line usage
     if sys.argc != 3:
         print("Usage:")
+        exit()
 
     # TODO: Read database file into a variable
-    row
+    rows = []
+    with open(sys.argv[1].csv) as file:
+        reader = csv.DictReader(file)
+        for row in reader
 
     # TODO: Read DNA sequence file into a variable
 
