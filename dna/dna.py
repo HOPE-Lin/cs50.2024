@@ -7,7 +7,7 @@ def main():
     # TODO: Check for command-line usage
     if sys.argc != 3:
         print("Usage:")
-        exit()
+        sys.exit(1)
 
     # TODO: Read database file into a variable
     rows = []
