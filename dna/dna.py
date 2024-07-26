@@ -39,6 +39,7 @@ def main():
             print("rows[p].values(): ", list(rows[p].values())[j + 1])
             if longests[j] == int(list(rows[p].values())[j + 1]):
                  match_found = False
+                 break
         if match_found:
             print(f"{list(rows[p].keys())[0]}")
             sys.exit(0)
