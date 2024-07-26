@@ -13,11 +13,9 @@ def main():
     rows = []
     i = 0
     with open(sys.argv[1], 'r') as file:
-       # firster = file.readline()
-        firster = []
+        #firster = file.readline()
         reader = csv.DictReader(file)
-        headers = next(reader)
-        firster = headers[1:]
+        firster = reader.fieldnames[1:]
         for row in reader:
             rows.append(row)
             i += 1
