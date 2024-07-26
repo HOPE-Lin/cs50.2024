@@ -6,7 +6,7 @@ def is_even(s):
     j = t - 1
     sum = 0
     while i >= 0:
-        p = (int)s[i] * 2
+        p = int(s[i]) * 2
         if p > 9:
             sum = sum + (p % 10) +1
         else:
