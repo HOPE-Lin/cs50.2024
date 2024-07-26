@@ -13,6 +13,6 @@ while t >= 0.05:
     t -= 0.05
     p += 1
 while t >= 0.01:
-    round(t - 0.01, 2)
+    t = t - 0.01
     p += 1
 print(f"{p}")
