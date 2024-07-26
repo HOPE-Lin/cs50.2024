@@ -6,7 +6,7 @@ def main():
 
     # TODO: Check for command-line usage
     if sys.argc != 3:
-        print(")
+        print("Usage:")
 
     # TODO: Read database file into a variable
 
