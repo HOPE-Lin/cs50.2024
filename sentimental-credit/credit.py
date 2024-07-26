@@ -40,3 +40,5 @@ def main():
                 print("VISA")
     else:
         print("INVALID")
+
+main()
