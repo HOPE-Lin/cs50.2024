@@ -32,7 +32,6 @@ def main():
         k += 1
 
     # TODO: Check database for matching profiles
-    l = 0
     for p in range(i):
         l = 0
         for j in range(k):
