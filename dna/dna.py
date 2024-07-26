@@ -25,14 +25,16 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
     longests = []
+    k = 0
     for item in firster[1 : ]:
         longest = longest_match(content, item)
         longests.append(longest)
+        k += 1
 
     # TODO: Check database for matching profiles
     for p in range(1, i, 1):
-        for j in longests:
-            if longests[j] != rows[p][j + 1]:
+        for j in range(k):
+            if longests[j] != rows[p][j]:
                 break
         print(f"{rows[p][0]}")
     else:
