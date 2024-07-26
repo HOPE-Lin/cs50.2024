@@ -9,6 +9,7 @@ def main():
         print("Usage:")
 
     # TODO: Read database file into a variable
+    row
 
     # TODO: Read DNA sequence file into a variable
 
