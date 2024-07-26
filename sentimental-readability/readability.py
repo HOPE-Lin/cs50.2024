@@ -3,7 +3,7 @@ from cs50 import get_string
 s = get_string("Text: ")
 t = len(s)
 a = 0
-b = 0
+b = 1
 c = 0
 for i in range(t):
     if s[i].isalpha():
@@ -18,5 +18,5 @@ if g > 16:
 elif g < 1:
     print("Before Grade 1")
 else:
-    print(f"Grade {g}")
+    print(f"Grade {round(g, )}")
 
