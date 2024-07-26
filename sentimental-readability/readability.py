@@ -6,7 +6,7 @@ a = 0
 b = 0
 c = 0
 for i in range(t):
-    if s[i].isalpha:
+    if s[i].isalpha():
         a += 1
     elif s[i].isspace():
         b += 1
@@ -18,5 +18,5 @@ if g > 16:
 elif g < 1:
     print("Before Grade 1")
 else:
-    print("Grade " + g)
+    print(f"Grade {g}")
 
