@@ -2,8 +2,8 @@ import re
 
 def is_credit(s):
     t = len(s)
-    i = t - 1
-    j = t - 2
+    i = t - 2
+    j = t - 1
     sum = 0
     while i >= 0:
         p = int(s[i]) * 2
