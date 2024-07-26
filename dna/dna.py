@@ -5,7 +5,7 @@ import sys
 def main():
 
     # TODO: Check for command-line usage
-    if sys.argc != 3:
+    if len(sys.argv) != 3:
         print("Usage:")
         sys.exit(1)
 
