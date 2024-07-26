@@ -41,7 +41,7 @@ def main():
             else:
                 l += 1
         if l == k:
-            print(f"{rows[p]}")
+            print(f"{list(rows[p].keys())[0]}")
             sys.exit(0)
     else:
         print("No match")
