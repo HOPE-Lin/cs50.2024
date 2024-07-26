@@ -24,7 +24,8 @@ def main():
         content = file.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-    for
+    for item in firster[1 : ]:
+        longest
 
     # TODO: Check database for matching profiles
 
