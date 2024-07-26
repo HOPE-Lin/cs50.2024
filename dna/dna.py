@@ -32,11 +32,15 @@ def main():
         k += 1
 
     # TODO: Check database for matching profiles
+    l = 0
     for p in range(1, i, 1):
+        l = 0
         for j in range(k):
             if longests[j] != rows[p][j]:
                 break
-        else:
+            else:
+                l += 1
+        if l == k:
             print(f"{rows[p][0]}")
             sys.exit(0)
     else:
