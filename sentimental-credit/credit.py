@@ -1,5 +1,6 @@
 import re
 
+
 def is_credit(s):
     t = len(s)
     i = t - 2
@@ -8,7 +9,7 @@ def is_credit(s):
     while i >= 0:
         p = int(s[i]) * 2
         if p > 9:
-            sum = sum + (p % 10) +1
+            sum = sum + (p % 10) + 1
         else:
             sum += p
         i -= 2
@@ -20,6 +21,7 @@ def is_credit(s):
         return True
     else:
         return False
+
 
 def main():
     s = input("Number: ")
@@ -34,5 +36,6 @@ def main():
         print("VISA")
     else:
         print("INVALID")
+
 
 main()
