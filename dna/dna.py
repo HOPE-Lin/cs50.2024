@@ -31,7 +31,8 @@ def main():
 
     # TODO: Check database for matching profiles
     for p in range(1, t, 1):
-        if 
+        for j in firster[1 : ]:
+            if longests[j] == rows[p[j]]
 
     return
 
