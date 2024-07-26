@@ -42,7 +42,7 @@ def main():
                  match_found = False
                  break
         if match_found:
-            print(f"{list(rows[p].keys())[0]}")
+            print(f"{list(rows[p].values())[0]}")
             sys.exit(0)
     else:
         print("No match")
