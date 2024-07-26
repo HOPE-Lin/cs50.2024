@@ -10,9 +10,9 @@ while t >= 0.10:
     t -= 0.10
     p += 1
 while t >= 0.05:
-    round(t - 0.05, 2)
+    t = round(t - 0.05, 2)
     p += 1
 while t >= 0.01:
-    round(t - 0.01, 2)
+    t = round(t - 0.01, 2)
     p += 1
 print(f"{p}")
