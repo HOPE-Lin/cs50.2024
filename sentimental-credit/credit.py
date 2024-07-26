@@ -1,7 +1,12 @@
 import re
 
 def is_even(s):
-    
+    t = s.len
+    i = t
+    sum = 0
+    while i >= 0:
+        sum += (int)s[i]
+        i -= 2
 
 def main():
     s = input("Number: ")
