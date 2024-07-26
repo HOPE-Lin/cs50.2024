@@ -10,7 +10,41 @@ def main():
         sys.exit(1)
 
     # TODO: Read database file into a variable
-   
+    rows = []
+    i = 0
+    with open(sys.argv[1], 'r') as file:
+        firster = file.readline()
+        reader = csv.DictReader(file)
+        for row in reader:
+            rows.append(row)
+            i += 1
+
+    # TODO: Read DNA sequence file into a variable
+    with open(sys.argv[2], 'r') as file:
+        content = file.read()
+
+    # TODO: Find longest match of each STR in DNA sequence
+    longests = []
+    k = 0
+    for item in firster[1 : ]:
+        longest = longest_match(content, item)
+        longests.append(longest)
+        k += 1
+
+    # TODO: Check database for matching profiles
+    for p in range(i):
+        l = 0
+        for j in range(k):
+            print("longests[j]: ", longests[j])
+            print("rows[p].values(): ", list(rows[p].values())[j + 1])
+            if longests[j] == int(list(rows[p].values())[j + 1]):
+                l += 1
+        if l == k:
+            print(f"{list(rows[p].keys())[0]}")
+            sys.exit(0)
+    else:
+        print("No match")
+
     return
 
 
