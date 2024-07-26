@@ -5,7 +5,8 @@ import sys
 def main():
 
     # TODO: Check for command-line usage
-    if sys.argc != 3
+    if sys.argc != 3:
+        print(")
 
     # TODO: Read database file into a variable
 
