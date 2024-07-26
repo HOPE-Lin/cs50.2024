@@ -3,6 +3,7 @@ import re
 def is_even(s):
     t = s.len
     i = t
+    j = t - 1
     sum = 0
     while i >= 0:
         p = (int)s[i] * 2
@@ -10,6 +11,14 @@ def is_even(s):
             sum = sum + (p % 10) +1
         else:
             sum += p
+        i -= 2
+    while j >= 0:
+        p = s[j]
+        sum += p
+    if sum % 10 == 0:
+        return True
+    else:
+        return False
 
 def main():
     s = input("Number: ")
