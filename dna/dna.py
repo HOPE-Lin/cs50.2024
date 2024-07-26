@@ -33,7 +33,7 @@ def main():
 
     # TODO: Check database for matching profiles
     l = 0
-    for p in range(0, i, 1):
+    for p in range(i):
         l = 0
         for j in range(k):
             if longests[j] == list(rows[p].values())[j + 1]:
