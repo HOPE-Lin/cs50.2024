@@ -30,8 +30,8 @@ def main():
         longests.append(longest)
 
     # TODO: Check database for matching profiles
-    for p in range(i):
-        
+    for p in range(1, t, 1):
+        if 
 
     return
 
