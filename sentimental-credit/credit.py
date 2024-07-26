@@ -24,13 +24,12 @@ def is_credit(s):
 def main():
     s = input("Number: ")
     t = len(s)
-    if t == 15:
-        if re.match("^(34|37)", s):
-            if is_credit(s):
-                print("#")
+    if t == 15 and re.match("^(34|37)", s) and is_credit(s):
+        #if re.match("^(34|37)", s):
+            #if is_credit(s):
                 print("AMEX")
-    elif t == 16:
-        if re.match("^(51|52|53|54|55)", s):
+    elif t == 16 and re.match("^(51|52|53|54|55)", s)
+        #if re.match("^(51|52|53|54|55)", s):
             if is_credit(s):
                 print("MASTERCARD")
         if re.match("^(4)", s):
