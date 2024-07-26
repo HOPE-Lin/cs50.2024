@@ -13,7 +13,7 @@ def main():
     rows = []
     i = 0
     with open(sys.argv[1], 'r') as file:
-        firster = file.readline()
+       # firster = file.readline()
         reader = csv.DictReader(file)
         for row in reader:
             rows.append(row)
