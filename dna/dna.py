@@ -24,6 +24,7 @@ def main():
         content = file.read()
 
     # TODO: Find longest match of each STR in DNA sequence
+    my_dict = {'key' : 'value1}
     for item in firster[1 : ]:
         longest = longest_match(content, item)
 
