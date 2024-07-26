@@ -14,6 +14,7 @@ def main():
     i = 0
     with open(sys.argv[1], 'r') as file:
        # firster = file.readline()
+        firster = []
         reader = csv.DictReader(file)
         headers = next(reader)
         firster = headers[1:]
