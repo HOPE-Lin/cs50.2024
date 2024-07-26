@@ -1,7 +1,7 @@
 import re
 
 def is_even(s):
-    t = s.len
+    t = len(s)
     i = t
     j = t - 1
     sum = 0
@@ -22,7 +22,7 @@ def is_even(s):
 
 def main():
     s = input("Number: ")
-    t = s.len
+    t = len(s)
     if t == 15:
         if re.match("^(34|37)", s):
             if is_even(s):
