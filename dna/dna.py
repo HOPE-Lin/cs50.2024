@@ -24,10 +24,14 @@ def main():
         content = file.read()
 
     # TODO: Find longest match of each STR in DNA sequence
+    longests = []
     for item in firster[1 : ]:
         longest = longest_match(content, item)
+        longests.append(longest)
 
     # TODO: Check database for matching profiles
+    for p in range(i):
+        
 
     return
 
