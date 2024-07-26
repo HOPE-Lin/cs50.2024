@@ -27,6 +27,7 @@ def main():
     if t == 15:
         if re.match("^(34|37)", s):
             if is_credit(s):
+                print("#")
                 print("AMEX")
     elif t == 16:
         if re.match("^(51|52|53|54|55)", s):
