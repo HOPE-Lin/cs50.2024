@@ -18,5 +18,5 @@ if g > 16:
 elif g < 1:
     print("Before Grade 1")
 else:
-    print(f"Grade {round(g, )}")
+    print(f"Grade {round(g)}")
 
