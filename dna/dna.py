@@ -27,7 +27,7 @@ def main():
     longests = []
     k = 0
     for item in firster[1 : ]:
-        longest = longest_match(content, item)
+        longest = longest_match(content,  item.strip())
         longests.append(longest)
         k += 1
 
