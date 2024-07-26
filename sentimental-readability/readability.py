@@ -10,4 +10,6 @@ for i in range(t):
         a += 1
     elif s[i].isspace():
         b += 1
-    elif s[i] in [. ]
+    elif s[i] in ['.', '?',]:
+       c += 1
+g = 0.0588 * a
