@@ -36,8 +36,9 @@ def main():
         for j in range(k):
             if longests[j] != rows[p][j]:
                 break
-        print(f"{rows[p][0]}")
-        sys.exit(0)
+        else:
+            print(f"{rows[p][0]}")
+            sys.exit(0)
     else:
         print("No match")
 
