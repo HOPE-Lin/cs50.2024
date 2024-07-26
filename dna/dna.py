@@ -19,10 +19,11 @@ def main():
             i += 1
 
     # TODO: Read DNA sequence file into a variable
-    with open('sys.argv[2]') asfile:
-    
+    with open('sys.argv[2]') as file:
+        content = file.read()
 
     # TODO: Find longest match of each STR in DNA sequence
+    for 
 
     # TODO: Check database for matching profiles
 
