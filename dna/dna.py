@@ -32,7 +32,11 @@ def main():
     # TODO: Check database for matching profiles
     for p in range(1, t, 1):
         for j in firster[1 : ]:
-            if longests[j] == rows[p[j]]
+            if longests[j] != rows[p][j]:
+                break
+        print(f"{rows[p][0]})
+    else:
+        print("No match")
 
     return
 
