@@ -10,6 +10,6 @@ WHERE id IN
         FROM people
         WHERE name = 'Chadwick Boseman'
     )
-    ORDER BY rating DESC
+    ORDER BY
     LIMIT 5
 );
