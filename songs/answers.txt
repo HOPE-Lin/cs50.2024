@@ -1,2 +1,5 @@
 (1)
-    SELECT AY
+    SELECT AVG(energy)
+    FROM songs
+    ORDER BY DESC
+    LIMIT 100;
