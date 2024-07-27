@@ -11,7 +11,7 @@ WHERE id IN
         WHERE person_id =(
             SELECT id
             FROM people
-            WHERE name ='Kevin Bacon'
+            WHERE name = 'Kevin Bacon'
         )
     )
 )
