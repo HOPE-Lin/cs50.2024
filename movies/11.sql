@@ -1,9 +1,6 @@
 SELECT title
 FROM movies
-    /*CASE
-        WHEN rating = (SELECT MAX(rating) FROM ratings) THEN 1
-        ELSE 0
-    END AS ma_rat*/
+JOIN ratings ON ratings.movie_id = movies.id
 WHERE id IN
 (
     SELECT stars.movie_id
