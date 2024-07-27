@@ -10,4 +10,6 @@ WHERE id IN
         FROM people
         WHERE name ='Bradley Cooper' OR name = 'Jennifer Lawrence starred'
     )
-);
+)
+GROUP BY title
+HVING COUNT(id) = 2;
