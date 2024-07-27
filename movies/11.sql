@@ -2,9 +2,9 @@ SELECT title
 FROM movies
 WHERE id IN
 (
-    SELECT directors.movie_id
-    FROM directors
-    JOIN ratings ON directors.movie_id = ratings.movie_id
+    SELECT stars.movie_id
+    FROM stars
+    JOIN ratings ON stars.movie_id = ratings.movie_id
     WHERE person_id = (
         SELECT id
         FROM people
