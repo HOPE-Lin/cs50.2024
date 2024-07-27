@@ -10,4 +10,5 @@ WHERE id IN
         FROM ratings
         WHERE rating > 9.0
     )
-);
+)
+ORDER BY birth;
