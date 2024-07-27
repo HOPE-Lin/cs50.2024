@@ -12,4 +12,4 @@ WHERE id IN
     )
 )
 GROUP BY title
-HVING COUNT(id) = 2;
+HAVING COUNT(id) = 2;
