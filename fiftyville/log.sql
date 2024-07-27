@@ -8,4 +8,8 @@ WHERE year = 2023
   AND street = 'Humphrey Street'
   AND  description LIKE '%CS50%';
   --了解到发生时间：10.15am，三个目击者，详细地点是bakery
-  
+SELECT transcript
+FROM interviews
+WHERE year = 2023
+  AND month = 7
+  AND day = 28;
