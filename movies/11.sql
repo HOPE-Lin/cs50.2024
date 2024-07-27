@@ -15,5 +15,5 @@ WHERE id IN
         WHERE name = 'Chadwick Boseman'
     )
 )
-ORDER BY rating DESC
+ORDER BY ratings.rating DESC
 LIMIT 5;
