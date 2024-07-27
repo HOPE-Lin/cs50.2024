@@ -1,0 +1,2 @@
+SELECT AVG(rating)
+FROM 
