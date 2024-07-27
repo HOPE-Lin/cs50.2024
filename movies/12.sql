@@ -8,6 +8,6 @@ WHERE id IN
     (
         SELECT id
         FROM people
-        WHERE name ='Bradley Cooper' OR 'Jennifer Lawrence starred'
+        WHERE name ='Bradley Cooper' AND 'Jennifer Lawrence starred'
     )
 );
