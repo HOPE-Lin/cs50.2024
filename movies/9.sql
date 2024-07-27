@@ -10,4 +10,5 @@ WHERE id IN
         FROM movies
         WHERE year = 2004
     )
-);
+)
+ORDER BY birth;
