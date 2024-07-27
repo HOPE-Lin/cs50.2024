@@ -1,13 +1,7 @@
 (1)
     SELECT AVG(energy)
-    FROM songs
-    ORDER BY DESC
-    LIMIT 100;
-    SELECT AVG(valence)
-    FROM songs
-    ORDER BY DESC
-    LIMIT 100;
-    SELECT AVG(danceability)
+           AVG(valence)
+           AVG(danceability)
     FROM songs
     ORDER BY DESC
     LIMIT 100;
