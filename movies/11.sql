@@ -2,7 +2,7 @@ SELECT title
 FROM movies
 WHERE id IN
 (
-    SELECT movie_id
+    SELECT directors.movie_id
     FROM directors
     JOIN ratings ON directors.movie_id = ratings.movie_id
     WHERE person_id = (
@@ -10,6 +10,6 @@ WHERE id IN
         FROM people
         WHERE name = 'Chadwick Boseman'
     )
-    ORDER BY rating
+    ORDER BY ratings.rating
     LIMIT 5
 );
