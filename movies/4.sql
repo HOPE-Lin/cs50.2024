@@ -1,3 +1,3 @@
 SELECT COUNT(rating)
 FROM ratings
-WHERE ra
+WHERE rating = 10.0;
