@@ -15,4 +15,4 @@ WHERE id IN
         )
     )
 )
-NOT IN ('Kevin Bacon');
+AND name NOT IN ('Kevin Bacon');
