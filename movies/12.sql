@@ -10,6 +10,7 @@ WHERE id IN
         FROM people
         WHERE name ='Bradley Cooper' OR name = 'Jennifer Lawrence starred'
     )
+    GROUP BY movie_id
+    HAVING COUNT(movie_id) = 2
 )
-GROUP BY title
-HAVING COUNT(id) = 2;
+;
