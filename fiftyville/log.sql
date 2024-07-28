@@ -25,8 +25,11 @@ CREATE TABLE suspicious(
     id INTEGER,
     bakery_parking
     withdrawing_money
-    
-)
+    caller
+    receiver
+    flights
+    city
+);
 
   --面包店停车场的监控录像，开车离开的人
 SELECT name
