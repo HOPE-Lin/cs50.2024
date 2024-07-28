@@ -68,8 +68,8 @@ WHERE year = 2023
     AND day = 28
     AND duration < 60
 ;
---买29日最早的航班离开Fiftyville
 
+--买29日最早的航班离开Fiftyville
 SELECT name, city
 FROM people
 JOIN passengers ON people.passport_number =passengers.passport_number
