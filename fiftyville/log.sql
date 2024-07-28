@@ -61,5 +61,5 @@ WHERE year = 2023
     AND month = 7
     AND day = 28
     AND duration < 60
-JOIN people on  people.phone_number = phone_calls.caller
-JOIN people on  people.phone_number = phone_calls.receiver
+JOIN people.name ON  people.phone_number = phone_calls.caller
+JOIN people.name ON  people.phone_number = phone_calls.receiver
