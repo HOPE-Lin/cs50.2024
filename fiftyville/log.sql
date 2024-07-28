@@ -37,8 +37,9 @@ FROM people
 WHERE*/
 
 --小偷在Leggett Street ATM 上取钱取钱，在Eugene到达面包店之前；
-SELECT account_number
+SELECT account_number, name
 FROM atm_transactions
+JOIN people ON 
 WHERE year = 2023
     AND month = 7
     AND day = 28
