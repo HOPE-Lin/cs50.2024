@@ -19,7 +19,10 @@ WHERE year = 2023
   --在Eugene到达面包店之前，小偷在Leggett Street ATM 上取钱；
   --离开面包店时，打电话让同伙买29日最早的航班离开Fiftyville，电话持续不到一分钟
 
-  --面包店停车场的监控录像
+  --面包店停车场的监控录像，开车离开的人
+
+
+  
 SELECT license_plate
 FROM bakery_security_logs
 WHERE year = 2023
@@ -28,3 +31,9 @@ WHERE year = 2023
   AND hour = 10
   AND minute > 15 AND minute < 25
   AND activity = 'exit';
+SELECT name
+FROM people
+WHERE
+
+--小偷在Leggett Street ATM 上取钱取钱，在Eugene到达面包店之前；
+--Eugene到达面包店的时间
