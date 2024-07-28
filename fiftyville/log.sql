@@ -29,11 +29,10 @@ CREATE TABLE suspicious_man(
     receiver TEXT,
     flights TEXT,
     city TEXT,
-    PRIMARY KEY(id)
 );
 
   --面包店停车场的监控录像，开车离开的人
-UPDATE suspicious_man(bakery_parking)
+INSERT INTO suspicious_man(bakery_parking)
 SELECT name
 FROM people
 WHERE license_plate IN
@@ -49,7 +48,7 @@ WHERE license_plate IN
 );
 
 --小偷在Leggett Street ATM 上取钱取钱，在到达面包店之前；
-UPDATE suspicious_man(withdrawing_money)
+INSERT INTO suspicious_man(withdrawing_money)
 SELECT name
 FROM people
 WHERE id IN
@@ -69,7 +68,7 @@ WHERE id IN
 );
 
 --离开面包店时，打电话，电话持续不到一分钟
-UPDATE suspicious_man(caller, receiver)
+INSERT INTO suspicious_man(caller, receiver)
 SELECT pr.name AS caller,
        ps.name AS receiver
 FROM phone_calls
@@ -81,7 +80,7 @@ WHERE year = 2023
     AND duration < 60
 ;
 --买29日最早的航班离开Fiftyville
-UPDATE suspicious_man(flights, city)
+INSERT INTO suspicious_man(flights, city)
 SELECT name, city
 FROM people
 JOIN passengers ON people.passport_number =passengers.passport_number
