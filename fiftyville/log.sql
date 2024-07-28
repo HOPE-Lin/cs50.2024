@@ -45,7 +45,7 @@ WHERE id IN
     FROM bank_accounts
     WHERE account_number IN
     (
-        SELECT account_number, name
+        SELECT account_number
         FROM atm_transactions
         WHERE year = 2023
            AND month = 7
