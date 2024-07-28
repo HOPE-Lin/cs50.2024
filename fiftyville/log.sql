@@ -49,10 +49,14 @@ WHERE id IN
         WHERE year = 2023
            AND month = 7
            AND day = 28
-          AND atm_location = 'Leggett Street'
+           AND atm_location = 'Leggett Street'
            AND transaction_type = 'withdraw'
     )
 );
 
 --离开面包店时，打电话，电话持续不到一分钟
-
+SELECT phone_calls, receiver
+FROM phone_calls
+ WHERE year = 2023
+    AND month = 7
+    AND day = 28
