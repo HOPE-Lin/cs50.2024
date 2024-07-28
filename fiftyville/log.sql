@@ -74,6 +74,8 @@ WHERE passport_number IN
     FROM passengers
     WHERE flight_id =
     (
-        SELECT 
+        SELECT id
+        FROM flights
+        WHERE
     )
 )
