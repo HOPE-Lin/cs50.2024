@@ -72,10 +72,18 @@ WHERE passport_number IN
 (
     SELECT passport_number
     FROM passengers
-    WHERE flight_id =
+    WHERE flight_id IN
     (
         SELECT id
         FROM flights
-        WHERE
+        WHERE year = 2023
+           AND month = 7
+           AND day = 29
+           AND origin_airport_id IN
+           (
+            SELECT id
+            FROM airports
+            WHERE city = 'Fiftyville'
+           )
     )
 )
