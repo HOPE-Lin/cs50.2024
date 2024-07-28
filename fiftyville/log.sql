@@ -97,3 +97,4 @@ WHERE people.passport_number IN
     )
 );
 --读出嫌疑
+--比较可知小偷，同伙（小偷打电话给她）
