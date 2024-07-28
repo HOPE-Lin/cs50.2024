@@ -17,7 +17,7 @@ WHERE year = 2023
   AND transcript LIKE '%bakery%';
   --10.15am ——10.25am小偷开汽车逃走；
   --在Eugene到达面包店之前，小偷在Leggett Street ATM 上取钱；
-  --打电话让同伙买29日最早的航班离开Fiftyville，电话持续不到一分钟
+  --离开面包店时，打电话让同伙买29日最早的航班离开Fiftyville，电话持续不到一分钟
 /*SELECT activity, license_plate
 FROM bakery_security_logs
 WHERE year = 2023
