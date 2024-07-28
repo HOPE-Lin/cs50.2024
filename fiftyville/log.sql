@@ -14,6 +14,7 @@ WHERE year = 2023
   AND month = 7
   AND day = 28
   AND transcript LIKE '%bakery%';
+  --10.15am ——10.25am小偷开汽车逃走，
 /*SELECT activity, license_plate
 FROM bakery_security_logs
 WHERE year = 2023
