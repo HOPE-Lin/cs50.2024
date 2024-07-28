@@ -66,3 +66,4 @@ WHERE year = 2023
     AND duration < 60
 ;
 --买29日最早的航班离开Fiftyville
+SELECT
