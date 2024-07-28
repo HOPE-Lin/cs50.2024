@@ -23,12 +23,13 @@ WHERE year = 2023
   --创建一个新表，来储存每一个目击者提到的可疑人员
 CREATE TABLE suspicious(
     id INTEGER,
-    bakery_parking
-    withdrawing_money
-    caller
-    receiver
-    flights
-    city
+    bakery_parking TEXT,
+    withdrawing_money TEXT,
+    caller TEXT,
+    receiver TEXT,
+    flights TEXT,
+    city TEXT,
+    PRIMARY KEY(id)
 );
 
   --面包店停车场的监控录像，开车离开的人
