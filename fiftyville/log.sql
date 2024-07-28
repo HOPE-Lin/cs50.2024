@@ -21,7 +21,7 @@ WHERE year = 2023
   --离开面包店时，打电话让同伙买29日最早的航班离开Fiftyville，电话持续不到一分钟
 
   --面包店停车场的监控录像，开车离开的人*/
-SELECT name
+/*SELECT name
 FROM people
 WHERE license_plate IN
 (
@@ -64,7 +64,7 @@ WHERE year = 2023
     AND month = 7
     AND day = 28
     AND duration < 60
-;
+;*/
 --买29日最早的航班离开Fiftyville
 SELECT name
 FROM people
