@@ -38,3 +38,8 @@ WHERE*/
 
 --小偷在Leggett Street ATM 上取钱取钱，在Eugene到达面包店之前；
 SELECT account_number
+FROM atm_transactions
+WHERE year = 2023
+    AND month = 7
+    AND day = 28
+    AND atm_location = 'Leggett Street'
