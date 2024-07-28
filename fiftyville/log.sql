@@ -66,4 +66,14 @@ WHERE year = 2023
     AND duration < 60
 ;
 --买29日最早的航班离开Fiftyville
-SELECT
+SELECT name
+FROM people
+WHERE passport_number IN
+(
+    SELECT passport_number
+    FROM passengers
+    WHERE flight_id =
+    (
+        SELECT 
+    )
+)
