@@ -37,10 +37,15 @@ WHERE
 
 --小偷在Leggett Street ATM 上取钱取钱，在Eugene到达面包店之前；
 --Eugene到达面包店的时间
-SELECT hour,minute
+SELECT hour, minute
 FROM bakery_security_logs
 WHERE year = 2023
   AND month = 7
   AND day = 28
   AND activity = 'entrance'
-  AND ;
+  AND license_plate IN
+      (
+          SELECT license_plate
+          FROM people
+          WHERE name = 'Eugene'
+      );
