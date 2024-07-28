@@ -1,6 +1,6 @@
 -- Keep a log of any SQL queries you execute as you solve the mystery.
 --找到犯罪现场描述
-SELECT description
+/*SELECT description
 FROM crime_scene_reports
 WHERE year = 2023
   AND month = 7
@@ -20,7 +20,7 @@ WHERE year = 2023
   --在Eugene到达面包店之前，小偷在Leggett Street ATM 上取钱；
   --离开面包店时，打电话让同伙买29日最早的航班离开Fiftyville，电话持续不到一分钟
 
-  --面包店停车场的监控录像，开车离开的人
+  --面包店停车场的监控录像，开车离开的人*/
 
 
 
@@ -38,15 +38,15 @@ WHERE*/
 
 --小偷在Leggett Street ATM 上取钱取钱，在Eugene到达面包店之前；
 --Eugene到达面包店的时间
-SELECT hour, minute
+/*SELECT hour, minute
 FROM bakery_security_logs
 WHERE year = 2023
   AND month = 7
   AND day = 28
   AND activity = 'entrance'
-  AND license_plate IN
-      (
+  AND license_plate =
+      (*/
           SELECT license_plate
           FROM people
           WHERE name = 'Eugene'
-      );
+      ;
