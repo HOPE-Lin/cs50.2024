@@ -20,19 +20,8 @@ WHERE year = 2023
   --在Eugene到达面包店之前，小偷在Leggett Street ATM 上取钱；
   --离开面包店时，打电话让同伙买29日最早的航班离开Fiftyville，电话持续不到一分钟
 
-  --创建一个新表，来储存每一个目击者提到的可疑人员
-CREATE TABLE suspicious_man(
-    id INTEGER,
-    bakery_parking TEXT,
-    withdrawing_money TEXT,
-    caller TEXT,
-    receiver TEXT,
-    flights TEXT,
-    city TEXT,
-);
 
   --面包店停车场的监控录像，开车离开的人
-INSERT INTO suspicious_man(bakery_parking)
 SELECT name
 FROM people
 WHERE license_plate IN
@@ -48,7 +37,7 @@ WHERE license_plate IN
 );
 
 --小偷在Leggett Street ATM 上取钱取钱，在到达面包店之前；
-INSERT INTO suspicious_man(withdrawing_money)
+
 SELECT name
 FROM people
 WHERE id IN
@@ -68,7 +57,7 @@ WHERE id IN
 );
 
 --离开面包店时，打电话，电话持续不到一分钟
-INSERT INTO suspicious_man(caller, receiver)
+
 SELECT pr.name AS caller,
        ps.name AS receiver
 FROM phone_calls
@@ -80,7 +69,7 @@ WHERE year = 2023
     AND duration < 60
 ;
 --买29日最早的航班离开Fiftyville
-INSERT INTO suspicious_man(flights, city)
+
 SELECT name, city
 FROM people
 JOIN passengers ON people.passport_number =passengers.passport_number
@@ -108,5 +97,3 @@ WHERE people.passport_number IN
     )
 );
 --读出嫌疑
-SELECT *
-FROM suspicious;
