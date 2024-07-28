@@ -71,7 +71,7 @@ FROM people
 JOIN passengers ON people.passport_number =passengers.passport_number
 JOIN flights ON flights.id = passengers.flight_id
 JOIN airports ON airports.id = flights.destination_airport_id
-WHERE passport_number IN
+WHERE people.passport_number IN
 (
     SELECT passport_number
     FROM passengers
