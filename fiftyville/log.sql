@@ -55,11 +55,12 @@ WHERE id IN
 );
 
 --离开面包店时，打电话，电话持续不到一分钟
-SELECT caller, receiver
+SELECT pr.name AS caller,
+       PS.name AS receiver
 FROM phone_calls
 WHERE year = 2023
     AND month = 7
     AND day = 28
     AND duration < 60
-JOIN people ON  people.phone_number = phone_calls.caller
-JOIN people ON  people.phone_number = phone_calls.receiver
+JOIN people pr ON  people.phone_number = phone_calls.caller
+JOIN people ps ON  people.phone_number = phone_calls.receiver
