@@ -64,3 +64,4 @@ WHERE year = 2023
     AND duration < 60
 JOIN people pr ON  people.phone_number = phone_calls.caller
 JOIN people ps ON  people.phone_number = phone_calls.receiver
+;
