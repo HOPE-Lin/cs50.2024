@@ -23,12 +23,12 @@ WHERE year = 2023
   --创建一个新表，来储存每一个目击者提到的可疑人员
 CREATE TABLE suspicious_man(
     id INTEGER,
-    /*bakery_parking TEXT,
+    bakery_parking TEXT,
     withdrawing_money TEXT,
     caller TEXT,
     receiver TEXT,
     flights TEXT,
-    city TEXT,*/
+    city TEXT,
     PRIMARY KEY(id)
 );
 
