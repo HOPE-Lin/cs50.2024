@@ -58,8 +58,8 @@ WHERE id IN
 SELECT pr.name AS caller,
        ps.name AS receiver
 FROM phone_calls
-JOIN people pr ON  people.phone_number = phone_calls.caller
-JOIN people ps ON  people.phone_number = phone_calls.receiver
+JOIN people pr ON  pr.phone_number = phone_calls.caller
+JOIN people ps ON  ps.phone_number = phone_calls.receiver
 WHERE year = 2023
     AND month = 7
     AND day = 28
