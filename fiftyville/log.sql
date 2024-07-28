@@ -69,7 +69,8 @@ WHERE year = 2023
 SELECT name, city
 FROM people
 JOIN passengers ON people.passport_number =passengers.passport_number
-JOIN flights ON flights.id =
+JOIN flights ON flights.id = passengers.flight_id
+JOIN
 WHERE passport_number IN
 (
     SELECT passport_number
