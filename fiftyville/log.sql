@@ -22,7 +22,7 @@ WHERE year = 2023
   --面包店停车场的监控录像，开车离开的人
 
 
-  
+
 SELECT license_plate
 FROM bakery_security_logs
 WHERE year = 2023
@@ -37,3 +37,9 @@ WHERE
 
 --小偷在Leggett Street ATM 上取钱取钱，在Eugene到达面包店之前；
 --Eugene到达面包店的时间
+SELECT license_plate
+FROM bakery_security_logs
+WHERE year = 2023
+  AND month = 7
+  AND day = 28
+  AND activity = 'entrance';
