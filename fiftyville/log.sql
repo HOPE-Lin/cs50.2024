@@ -85,6 +85,7 @@ WHERE passport_number IN
             FROM airports
             WHERE city = 'Fiftyville'
            )
-        
+        ORDER BY hour, minute
+        LIMIT 1
     )
-)
+);
