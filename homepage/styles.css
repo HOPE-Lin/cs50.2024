@@ -22,6 +22,7 @@ button{
         background-color: blue;
         color: white;
         border: groove;
+        border-color: red;
         padding: 10px 20px;
         font-size: 16px;
         cursor: pointer;
@@ -29,5 +30,5 @@ button{
 }
 
 button:hover {
-    background-color: darkblue; /* 鼠标悬停时按钮变成深蓝色 */
+    background-color: darkblue;
 }
