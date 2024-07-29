@@ -14,7 +14,6 @@ body {
 }
 .header.right{
     float: right;
-    padding: 10px;
     width: 25%;
 }
 .row::after {
