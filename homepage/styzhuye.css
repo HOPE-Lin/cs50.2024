@@ -14,6 +14,11 @@ body {
 .hear.right{
     width: 25%;
 }
+@media screen and (max-width: 600px) {
+    .hear.right, .hear.left {
+      width: 100%;
+    }
+}
 
 .topnav {
     overflow: hidden;
@@ -27,7 +32,6 @@ body {
     padding: 12px 40px;
     text-decoration: none;
 }
-
 .topnav a:hover {
     background-color: #ddd;
     color: black;
