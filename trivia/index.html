@@ -12,11 +12,11 @@
                 let button = event.target;
                 if (button.innerHTML == '鸡哥'){
                     button.style.backgroundColor = 'Green';
-                    button.parentElement.querySelector(".feedback").innerHTML='答对了';
+                    button.parentElement.querySelector('.feedback').innerHTML='答对了';
                 }
                 else{
                     button.style.backgroundColor = 'Red';
-                    button.parentElement.querySelector(".feedback").innerHTML='在想想';
+                    button.parentElement.querySelector('.feedback').innerHTML='在想想';
                 }
             }
         </script>
@@ -32,12 +32,10 @@
                 <hr>
                 <h3>魔镜，魔镜，谁是世界上最帅的男人?</hs3>
                 <!-- TODO: Add multiple choice question here -->
-                 <p>
                      <button onclick="checkchoice(event)">孙笑川</button>
                      <button onclick="checkchoice(event)">鸡哥</button>
                      <button onclick="checkchoice(event)">丁真</button>
                      <button onclick="checkchoice(event)">大力王</button>
-                 </p>
                  <p class="feedback"></p>
             </div>
 
