@@ -27,10 +27,12 @@
                 if (input.value === '明菜'){
                     button.style.backgroundColor = 'Green';
                     button.parentElement.querySelector('.feedback').innerHTML='答对了';
+                    imageContainer.classList.remove('hidden');
                 }
                 else{
                     button.style.backgroundColor = 'Red';
                     button.parentElement.querySelector('.feedback').innerHTML='在想想';
+                    imageContainer.classList.add('hidden');
                 }
             }
         </script>
