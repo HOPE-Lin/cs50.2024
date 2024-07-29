@@ -3,17 +3,18 @@ body {
 }
 
 .header {
-    float: left;
     background-color: #f1f1f1;
-    padding: 15px;
     text-align: center;
     box-sizing: border-box;
 }
-.header left{
-
+.header.left{
+    float: left;
+    padding: 15px;
     width: 75%;
 }
-.header right{
+.header.right{
+    float: right;
+    padding: 10px;
     width: 25%;
 }
 .row::after {
