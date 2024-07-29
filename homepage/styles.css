@@ -18,14 +18,14 @@ h{
     font-size: 8em;
     font-weight: bold;
     border: 10px inset;
-    border-color: #555555;
+    border-color: Tomato;
     color: darkblue;
     padding: 20px;
     margin: 20px;
     text-align: center;
 }
 button{
-        background-color: blue;
+        background-color: DodgerBlue;
         color: white;
         border: groove;
         border-color: red;
