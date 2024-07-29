@@ -21,6 +21,11 @@
                     button.parentElement.querySelector('.feedback').innerHTML='在想想';
                 }
             }
+            funtion checks(event){
+                let button = event.target;
+                let input =  button.parentElement.querySelector('input');
+                if (input.value=)
+            }
         </script>
     </head>
     <body>
@@ -45,6 +50,10 @@
                 <h2>Part 2: Free Response</h2>
                 <hr>
                 <!-- TODO: Add free response question here -->
+                 <h3>选择你喜欢的一位明星</h3>
+                 <input type="text"></input>
+                 <button onclick="checks(event)">答案</button>
+                 <p class="feedback"></p>
             </div>
         </div>
     </body>
