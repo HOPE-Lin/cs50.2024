@@ -20,7 +20,7 @@ body {
     clear: both;
   }
 
-@media screen and (max-width: 600px) {
+@media screen /*and (max-width: 600px)*/ {
     .hear.right, .hear.left {
       width: 100%;
     }
