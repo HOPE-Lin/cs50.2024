@@ -12,13 +12,17 @@ body{
     text-align: center;
     padding-top: 20px;
     color: black;
-    margin-top: 120px;
+    margin-top: 130px;
 }
 h{
-    font-size: 7em;
+    font-size: 8em;
     font-weight: bold;
-    border: inset;
+    border: 10px inset;
     border-color: #555555;
+    color: darkblue;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
 }
 button{
         background-color: blue;
