@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            function checkchoice(event){
+                let button = event.target;
+                let buttons = document.querySelectorAll('.section button');
+                buttons.forEach(btn => {btn.style.backgroundColor='#d9edff'});
+                if (button.innerHTML == '鸡哥'){
+                    button.style.backgroundColor = 'Green';
+                    button.parentElement.querySelector('.feedback').innerHTML='答对了';
+                }
+                else{
+                    button.style.backgroundColor = 'Red';
+                    button.parentElement.querySelector('.feedback').innerHTML='在想想';
+                }
+            }
+            function checks(event){
+                let button = event.target;
+                let input =  button.parentElement.querySelector('input');
+                let imageContainer = document.getElementById('imageContainer');
+                if (input.value === '明菜'){
+                    button.style.backgroundColor = 'Green';
+                    button.parentElement.querySelector('.feedback').innerHTML='答对了';
+                    imageContainer.classList.remove('hidden');
+                }
+                else{
+                    button.style.backgroundColor = 'Red';
+                    button.parentElement.querySelector('.feedback').innerHTML='在想想';
+                    imageContainer.classList.add('hidden');
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>魔镜，魔镜，谁是世界上最帅的男人?</h3>
+                <!-- TODO: Add multiple choice question here -->
+                     <button onclick="checkchoice(event)">孙笑川</button>
+                     <button onclick="checkchoice(event)">鸡哥</button>
+                     <button onclick="checkchoice(event)">丁真</button>
+                     <button onclick="checkchoice(event)">大力王</button>
+                     <p class="feedback"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                 <h3>选择你喜欢的一位明星</h3>
+                 <input type="text" placeholder="名字"></input>
+                 <button onclick="checks(event)">答案</button>
+                 <p class="feedback"></p>
+            </div>
+
+            <div class="image-container hidden" id="imageContainer">
+                <img src="https://th.bing.com/th/id/R.2a6731e9bf20f335a69d7d12ecd703e5?rik=0FqZnkJrMB2kBw&riu=http%3a%2f%2fpic.baike.soso.com%2fp%2f20140220%2f20140220170720-1293697483.jpg&ehk=FJxYMZHuMad%2f%2fm1GXU7%2bkzUCFxDZU84WWulvNrEHCPs%3d&risl=&pid=ImgRaw&r=0" alt="Correct Image" id="correctImage">
+            </div>
+        </div>
+    </body>
+</html>
