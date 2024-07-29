@@ -20,12 +20,6 @@ body {
     clear: both;
   }
 
-
-   .hear.right, .hear.left {
-      width: 100%;
-    }
-}
-
 .topnav {
     overflow: hidden;
     background-color: #333;
