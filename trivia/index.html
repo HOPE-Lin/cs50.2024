@@ -12,7 +12,11 @@
                 let button = event.target;
                 if (button.innerHTML == '鸡哥'){
                     button.style.backgroundColor = 'Green';
-                    button.parentElement.querySelector
+                    button.parentElement.querySelector(".feedback").inenerHTML='答对了';
+                }
+                else{
+                    button.style.backgroundColor = 'Red';
+                    button.parentElement.querySelector(".feedback").inenerHTML='在想想';
                 }
             }
         </script>
