@@ -24,8 +24,13 @@
             funtion checks(event){
                 let button = event.target;
                 let input =  button.parentElement.querySelector('input');
-                if (input.value == '明菜'){
-                    
+                if (input.value === '明菜'){
+                    button.style.backgroundColor = 'Green';
+                    button.parentElement.querySelector('.feedback').innerHTML='答对了';
+                }
+                else{
+                    button.style.backgroundColor = 'Red';
+                    button.parentElement.querySelector('.feedback').innerHTML='在想想';
                 }
             }
         </script>
