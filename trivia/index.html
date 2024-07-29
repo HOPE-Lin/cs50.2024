@@ -11,7 +11,7 @@
             function checkchoice(event){
                 let button = event.target;
                 let buttons = document.querySelectorAll('.section button');
-                buttons.forEach(btn => {btn})
+                buttons.forEach(btn => {btn.style.backgroundColor='#d9edff'});
                 if (button.innerHTML == '鸡哥'){
                     button.style.backgroundColor = 'Green';
                     button.parentElement.querySelector('.feedback').innerHTML='答对了';
