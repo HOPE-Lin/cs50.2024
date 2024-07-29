@@ -9,9 +9,9 @@
 }
 @keyframes slide {
     0% {
-        background-position: 0% 0%; /* 背景位置从左上角开始 */
+        background-position: 0% 0%;
     }
     100% {
-        background-position: 100% 100%; /* 背景位置到右下角结束 */
+        background-position: 100% 100%;
     }
 }
