@@ -9,11 +9,11 @@ body {
     text-align: center;
     box-sizing: border-box;
 }
-.header.left{
+.header left{
 
     width: 75%;
 }
-.header.right{
+.header right{
     width: 25%;
 }
 .row::after {
