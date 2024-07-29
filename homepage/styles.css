@@ -5,13 +5,10 @@ body{
         background-image: url('backgroun.gif');
         background-size: cover;
         background-position: center;
-        animation: slide 10s infinite linear;
+        background-repeat: no-repeat;
 }
-@keyframes slide {
-    0% {
-        background-position: 0% 0%;
-    }
-    100% {
-        background-position: 100% 100%;
-    }
+.content{
+    text-align: center;
+    padding-top: 20px;
+    color: white;
 }
