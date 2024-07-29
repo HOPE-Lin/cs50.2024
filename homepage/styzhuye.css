@@ -8,6 +8,12 @@ body {
     padding: 15px;
     text-align: center;
 }
+.hear.left{
+    width: 75%;
+}
+.hear.right{
+    width: 25%;
+}
 
 .topnav {
     overflow: hidden;
