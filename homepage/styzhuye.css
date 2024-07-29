@@ -14,6 +14,12 @@ body {
 .hear.right{
     width: 25%;
 }
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
 @media screen and (max-width: 600px) {
     .hear.right, .hear.left {
       width: 100%;
