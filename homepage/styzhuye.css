@@ -3,13 +3,13 @@ body {
 }
 
 .header {
+    padding: 15px;
     background-color: #f1f1f1;
     text-align: center;
     box-sizing: border-box;
 }
 .header.left{
     float: left;
-    padding: 15px;
     width: 75%;
 }
 .header.right{
