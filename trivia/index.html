@@ -10,7 +10,8 @@
             // TODO: Add code to check answers to questions
             function checkchoice(event){
                 let button = event.target;
-                let buttons = document.querySelectorAll
+                let buttons = document.querySelectorAll('.section button');
+                
                 if (button.innerHTML == '鸡哥'){
                     button.style.backgroundColor = 'Green';
                     button.parentElement.querySelector('.feedback').innerHTML='答对了';
