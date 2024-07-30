@@ -23,7 +23,7 @@ body {
     top: 0;
     z-index: 1000;
 }
-}
+
 .header_right{
     font-family:'ZCOOL KuaiLe', serif;
     float: right;
@@ -36,7 +36,7 @@ body {
     top: 0;
     z-index: 1000;
 }
-}
+
 .row::after {
     content: "";
     display: table;
