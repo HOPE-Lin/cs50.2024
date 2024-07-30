@@ -7,6 +7,9 @@ body {
     background-color: #f1f1f1;
     text-align: center;
     box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 .header.left{
     font-family:'Zhi Mang Xing', serif;
@@ -28,7 +31,7 @@ body {
     overflow: hidden;
     background-color: #333;
     position: fixed;
-    top: 0;
+    top: 12;
     width: 100%;
 }
 .topnav ul{
