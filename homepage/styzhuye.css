@@ -67,6 +67,9 @@ body {
     padding: 60px;
     background-color: #f4f4f4;
 }
+.home h1{
+    text-align: center;
+}
 .home .jieshao{
     font-family:'ZCOOL KuaiLe', serif;
     font-size: 2em;
