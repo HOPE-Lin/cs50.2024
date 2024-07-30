@@ -125,14 +125,14 @@ body {
     flex: 3;
 }
 
-.xingquc.shangwang.image {
+.xingquc.shangwang.picture {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.xingquc.shangwang.image img {
+.xingquc.shangwang.picture img {
     max-width: 100%;
     height: auto;
 }
