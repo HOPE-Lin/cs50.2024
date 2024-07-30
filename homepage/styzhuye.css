@@ -115,6 +115,28 @@ body {
 .xingquc .gushi{
     font-family:'ZCOOL KuaiLe', serif;
 }
-.xingquc.wangshang{
-
+.xingquc.wangshang.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
 }
+
+.text {
+    flex: 3;
+    padding: 20px;
+}
+
+.image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
