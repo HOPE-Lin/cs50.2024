@@ -1,16 +1,6 @@
 body {
     margin: 0;
 }
-
-/*.header {
-    padding: 12px;
-    background-color: #f1f1f1;
-    text-align: center;
-    box-sizing: border-box;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-}*/
 .header_left{
     font-family:'Zhi Mang Xing', serif;
     float: left;
