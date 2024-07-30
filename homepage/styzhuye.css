@@ -14,7 +14,6 @@ body {
     left: 0;
     z-index: 1000;
 }
-
 .header_right{
     font-family:'ZCOOL KuaiLe', serif;
     float: right;
@@ -28,12 +27,12 @@ body {
     z-index: 1000;
     right: 0;
 }
-
 .row::after {
     content: "";
     display: table;
     clear: both;
   }
+
 
 .topnav {
     overflow: hidden;
@@ -62,6 +61,8 @@ body {
 .active {
     background-color: OliveDrab;
   }
+
+
 .jianjie1{
     margin-top: 120px;
     padding: 60px;

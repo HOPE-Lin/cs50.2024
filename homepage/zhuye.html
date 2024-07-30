@@ -10,8 +10,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
         <title>主页</title>
-        <script>
-        </script>
     </head>
     <body>
         <div class="row">
@@ -31,38 +29,33 @@
             </ul>
         </div>
         <div class = "home" id = "ihome">
-           <!-- <h1>
-                你们好，欢迎访问李翰林的网站！
-            </h1>
-            <p>我是李翰林，来自中国</p>
-            <p>在这里，我将简要介绍一下自己：</p>
-            <div class = "jieshao">
-                <p>我的名字是李翰林，20岁</p>
-                <p>未婚，没有女朋友</p>
-                <p>住在安徽宿州</p>
-                <p>在西安电子科技大学读书</p>
-                <p>我不抽烟，也不喝酒</p>
-                <p>晚上11点睡，要睡够8个小时</p>
-                <p>睡前，一定要喝一杯牛奶</p>
-                <p>然后进行唱、跳、rap和篮球半小时</p>
-                <p>上了床，马上熟睡，一觉睡到天亮</p>
-                <P>医生都说我很正常</P>
-            </div> -->
+
         </div>
         <script>
             function loadPage(page) {
-                let content = document.getElementById('jianjie');
+                let content = document.getElementById('ihome');
                 let xhr = new XMLHttpRequest();
                 xhr.open('GET', page + '.html', true);
                 xhr.onload = function() {
                     if (xhr.status === 200) {
                         content.innerHTML = xhr.responseText;
+                        updateActiveLink(page);
                     } else {
                         content.innerHTML = '<p>页面未找到。</p>';
                     }
                 };
                 xhr.send();
             }
+            function updateActiveLink(page) {
+                let links = document.querySelectorAll('.topnav ul li a');
+                links.forEach(link => {
+                    if (link.getAttribute('href') === '#' + page) {
+                        link.classList.add('active');
+                    } else {
+                       link.classList.remove('active');
+        }
+    });
+}
             loadPage('jianjie');
         </script>
     </body>
