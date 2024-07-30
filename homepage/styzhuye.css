@@ -9,6 +9,7 @@ body {
     box-sizing: border-box;
     position: fixed;
     top: 0;
+    z-index: 1000;
 }
 .header.left{
     font-family:'Zhi Mang Xing', serif;
