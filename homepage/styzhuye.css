@@ -33,7 +33,7 @@ body {
     top: 0;
     width: 100%;
 }
-.topnav a {
+.topnav ul a {
     float: left;
     display: block;
     color: #f2f2f2;
@@ -41,7 +41,7 @@ body {
     padding: 10px 40px;
     text-decoration: none;
 }
-.topnav a:hover:not(.active) {
+.topnav ul  a:hover:not(.active) {
     background-color: #ddd;
     color: black;
 }
