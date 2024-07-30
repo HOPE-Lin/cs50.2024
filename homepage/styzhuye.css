@@ -9,6 +9,7 @@ body {
     box-sizing: border-box;
 }
 .header.left{
+    font-family:'Liu Jian Mao Cao', serif;
     float: left;
     width: 75%;
 }
