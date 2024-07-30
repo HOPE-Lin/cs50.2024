@@ -2,7 +2,7 @@ body{
         margin: 0;
         padding: 0;
         overflow: hidden;
-        background-image: url('backgroun.gif');
+        background-image: url('/picture/backgroun.gif');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
