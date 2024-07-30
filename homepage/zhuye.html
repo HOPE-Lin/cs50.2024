@@ -49,6 +49,21 @@
                 <P>医生都说我很正常</P>
             </div>
         </div>
-
+        <script>
+            function loadPage(page) {
+                let content = document.getElementById('content');
+                let xhr = new XMLHttpRequest();
+                xhr.open('GET', page + '.html', true);
+                xhr.onload = function() {
+                    if (xhr.status === 200) {
+                        content.innerHTML = xhr.responseText;
+                    } else {
+                        content.innerHTML = '<p>页面未找到。</p>';
+                    }
+                };
+                xhr.send();
+            }
+            loadPage('home');
+        </script>
     </body>
 </html>
