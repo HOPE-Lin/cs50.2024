@@ -12,6 +12,7 @@ body {
     font-family:'Zhi Mang Xing', serif;
     float: left;
     width: 75%;
+    margin-left: -40px;
 }
 .header.right{
     font-family:'ZCOOL KuaiLe', serif;
