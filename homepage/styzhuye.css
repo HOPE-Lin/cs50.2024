@@ -27,11 +27,14 @@ body {
 .topnav {
     overflow: hidden;
     background-color: #333;
-}
-.topnav ul{
     position: fixed;
     top: 0;
     width: 100%;
+}
+.topnav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 .topnav ul a {
     float: left;
