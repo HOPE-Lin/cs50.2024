@@ -2,7 +2,7 @@ body {
     margin: 0;
 }
 
-.header {
+/*.header {
     padding: 12px;
     background-color: #f1f1f1;
     text-align: center;
@@ -10,17 +10,32 @@ body {
     position: fixed;
     top: 0;
     z-index: 1000;
-    width: 100%;
-}
-.header.left{
+}*/
+.header_left{
     font-family:'Zhi Mang Xing', serif;
     float: left;
     width: 75%;
+    padding: 12px;
+    background-color: #f1f1f1;
+    text-align: center;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
-.header.right{
+}
+.header_right{
     font-family:'ZCOOL KuaiLe', serif;
     float: right;
     width: 25%;
+    padding: 12px;
+    background-color: #f1f1f1;
+    text-align: center;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
 }
 .row::after {
     content: "";
