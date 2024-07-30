@@ -77,3 +77,15 @@ body {
     font-size: 2em;
     padding: 80px;
 }
+.xingqu1{
+    margin-top: 120px;
+    padding: 60px;
+    background-color: #f4f4f4;
+    text-indent: 20px;
+}
+.xingqu h1{
+    text-align: center;
+}
+.xingqu .title{
+    font-size: 5em;
+}
