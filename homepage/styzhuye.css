@@ -131,10 +131,14 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 .xingquc .shangwang .picture img {
     max-width: 100%;
     height: auto;
 }
 
-
+.xingquc .sleep{
+    font-family:'ZCOOL KuaiLe', serif;
+}
+.xingquc .sleep .shui{
+    font-size: 1.5em;
+}
