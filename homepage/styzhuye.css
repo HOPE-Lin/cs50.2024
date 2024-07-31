@@ -176,5 +176,12 @@ body {
     font-family:'Zhi Mang Xing', serif;
     font-size: 1.5em;
     padding: 120px;
-    color : SlateGray;
+    color : Teal;
+}
+.xingquc footer{
+    border-top-style: solid;
+    border-width: 2px;
+    border-color: LightSlateGrey;
+    text-align: center;
+    font-family:'ZCOOL KuaiLe', serif;
 }
