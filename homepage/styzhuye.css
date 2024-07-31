@@ -115,24 +115,24 @@ body {
 .xingquc .gushi{
     font-family:'ZCOOL KuaiLe', serif;
 }
-.xingquc.shangwang{
+.xingquc .shangwang{
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 300px;
 }
 
-.xingquc.shangwang .text {
+.xingquc .shangwang .text {
     flex: 3;
 }
-.xingquc.shangwang .picture {
+.xingquc .shangwang .picture {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.xingquc.shangwang .picture img {
+.xingquc .shangwang .picture img {
     max-width: 100%;
     height: auto;
 }
