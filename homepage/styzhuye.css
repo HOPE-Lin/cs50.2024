@@ -62,7 +62,7 @@ body {
     background-color: OliveDrab;
   }
 
-
+/*简介*/
 .jianjiec{
     margin-top: 120px;
     padding: 60px;
@@ -78,7 +78,7 @@ body {
     padding: 80px;
 }
 
-
+/*兴趣*/
 .xingquc{
     margin-top: 120px;
     padding: 60px;
@@ -155,3 +155,4 @@ body {
     text-align: center;
     font-family:'ZCOOL KuaiLe', serif;
 }
+/*经历*/
