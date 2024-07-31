@@ -171,7 +171,8 @@ body {
     text-align: center;
     color : Navy;
 }
-.jinglic .haizi{
+.jinglic .haizi pre{
+    margin-top:
     font-family:'Zhi Mang Xing', serif;
     font-size: 1.5em;
     padding: 120px;
