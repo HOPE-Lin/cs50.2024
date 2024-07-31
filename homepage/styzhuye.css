@@ -188,3 +188,13 @@ body {
     border-color: LightSlateGrey;
     text-align: center;
 }
+/*杂话*/
+.qitac{
+    margin-top: 120px;
+    padding: 60px;
+    background-color: #f4f4f4;
+}
+.qitac h1{
+    text-align: center;
+    margin-bottom: 40px;
+}
