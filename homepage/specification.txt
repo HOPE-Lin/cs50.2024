@@ -1,12 +1,32 @@
 10 HTML tags
-<h>
-<hr>
-<br>
-<pre>
-<div>
-<b>
-<q>
-<mark>
-<ul>
-<li>
+    <h>
+    <hr>
+    <br>
+    <pre>
+    <div>
+    <b>
+    <q>
+    <p>
+    <mark>
+    <ul>
+    <li>
+    <abbr>
+    <del>
+    <footer>
+    <em>
+    <img>
+    <a>
+
  5 CSS
+    font-family:
+    float:
+    width:
+    padding:
+    background-color:
+    text-align:
+    box-sizing:
+    position:
+    top:
+    left:
+    z-index:
+    font-family:
