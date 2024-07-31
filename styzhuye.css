@@ -1,0 +1,212 @@
+body {
+    margin: 0;
+}
+.header_left{
+    font-family:'Zhi Mang Xing', serif;
+    float: left;
+    width: 75%;
+    padding: 12px;
+    background-color: #f1f1f1;
+    text-align: center;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.header_right{
+    font-family:'ZCOOL KuaiLe', serif;
+    float: right;
+    width: 25%;
+    padding: 12px;
+    background-color: #f1f1f1;
+    text-align: center;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    right: 0;
+}
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 78px;
+    width: 100%;
+}
+.topnav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.topnav ul li a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 40px;
+    text-decoration: none;
+}
+.topnav ul li a:hover:not(.active) {
+    background-color:  #ddd;
+    color: black;
+}
+.active {
+    background-color: OliveDrab;
+  }
+
+/*简介*/
+.jianjiec{
+    margin-top: 120px;
+    padding: 60px;
+    background-color: #f4f4f4;
+    text-indent: 20px;
+}
+.jianjiec h1{
+    text-align: center;
+}
+.jianjiec .jieshao{
+    font-family:'ZCOOL KuaiLe', serif;
+    font-size: 2em;
+    padding: 80px;
+}
+
+/*兴趣*/
+.xingquc{
+    margin-top: 120px;
+    padding: 60px;
+    background-color: #f4f4f4;
+}
+.xingquc h1{
+    text-align: center;
+}
+.xingquc .title{
+    font-size: 2em;
+    font-weight: bold;
+}
+.xingquc .title a:link,
+  .xingquc .title a:visited{
+    color: LightSeaGreen;
+    background-color: transparent;
+    text-decoration: none;
+}
+.xingquc .title a:hover {
+    color: Lime;
+    background-color: transparent;
+    text-decoration: underline;
+}
+.xingquc h2{
+    text-align: center;
+    font-size: 2em;
+    color: SpringGreen;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.xingquc .wenti ul{
+    font-family:'ZCOOL KuaiLe', serif;
+}
+.xingquc .mingyan{
+    font-family:'ZCOOL KuaiLe', serif;
+}
+.xingquc .gushi{
+    font-family:'ZCOOL KuaiLe', serif;
+}
+
+.xingquc .shangwang{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 300px;
+}
+.xingquc .shangwang .text {
+    flex: 3;
+}
+.xingquc .shangwang .text .liuyi{
+    font-family:'ZCOOL KuaiLe', serif;
+    font-size: 1.5em;
+}
+.xingquc .shangwang .picture {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.xingquc .shangwang .picture img {
+    max-width: 100%;
+    height: auto;
+}
+
+.xingquc .sleep{
+    font-family:'ZCOOL KuaiLe', serif;
+}
+.xingquc .sleep .shui{
+    font-size: 1.5em;
+}
+
+.xingquc footer{
+    margin-top: 160px;
+    border-top-style: solid;
+    border-width: 2px;
+    border-color: LightSlateGrey;
+    text-align: center;
+    font-family:'ZCOOL KuaiLe', serif;
+}
+/*经历*/
+.jinglic{
+    margin-top: 120px;
+    padding: 60px;
+    background-color: #f4f4f4;
+}
+.jinglic h1{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.jinglic .dufu{
+    font-family:'ZCOOL KuaiLe', serif;
+    font-size: 1.5em;
+    text-align: center;
+    color : Navy;
+}
+.jinglic .haizi pre{
+    margin-top: -60px;
+    font-family:'Zhi Mang Xing', serif;
+    font-size: 1.5em;
+    padding: 120px;
+    color : Teal;
+}
+.jinglic footer{
+    font-family:'ZCOOL KuaiLe', serif;
+    border-top-style: solid;
+    border-width: 2px;
+    border-color: LightSlateGrey;
+    text-align: center;
+}
+/*杂话*/
+.qitac{
+    margin-top: 120px;
+    padding: 60px;
+    background-color: #f4f4f4;
+}
+.qitac h1{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.qitac .zahua{
+    font-family:'ZCOOL KuaiLe', serif;
+    font-size: 1.5em;
+}
+.qitac footer{
+    margin-top: 160px;
+    border-top-style: solid;
+    border-width: 2px;
+    border-color: LightSlateGrey;
+    text-align: center;
+    font-family:'Zhi Mang Xing', serif;
+}

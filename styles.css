@@ -1,0 +1,41 @@
+body{
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-image: url('/picture/backgroun.gif');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+}
+.content{
+    text-align: center;
+    padding-top: 20px;
+    color: black;
+    margin-top: 120px;
+}
+h1{
+    font-size: 6em;
+    font-weight: bold;
+    font-family: 'Zhi Mang Xing', cursive;
+    border: 10px inset;
+    border-color: Tomato;
+    color: Indigo;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+}
+button{
+        background-color: DodgerBlue;
+        color: white;
+        border: groove;
+        border-color: red;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+}
+
+button:hover {
+    background-color: darkblue;
+}
