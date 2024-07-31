@@ -126,6 +126,10 @@ body {
 .xingquc .shangwang .text {
     flex: 3;
 }
+.xingquc .shangwang .text .liuyi{
+    font-family:'ZCOOL KuaiLe', serif;
+    font-size: 1.5em;
+}
 .xingquc .shangwang .picture {
     flex: 1;
     display: flex;
