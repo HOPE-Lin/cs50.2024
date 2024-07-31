@@ -156,3 +156,11 @@ body {
     font-family:'ZCOOL KuaiLe', serif;
 }
 /*经历*/
+.jinglic{
+    margin-top: 120px;
+    padding: 60px;
+    background-color: #f4f4f4;
+}
+.jinglic h1{
+    text-align: center;
+}
