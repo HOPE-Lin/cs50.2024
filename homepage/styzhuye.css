@@ -200,4 +200,13 @@ body {
 }
 .qitac .zahua{
     font-family:'ZCOOL KuaiLe', serif;
+    font-size: 1.5em;
+}
+.qitac footer{
+    margin-top: 160px;
+    border-top-style: solid;
+    border-width: 2px;
+    border-color: LightSlateGrey;
+    text-align: center;
+    font-family:'Zhi Mang Xing', serif;
 }
