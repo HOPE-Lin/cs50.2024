@@ -56,7 +56,7 @@ def index():
         value = usd(value)
         people.append({
             "symbol": symbol,
-            "share": shares,
+            "shares": shares,
             "price": price,
             "value" : value
         })
@@ -104,10 +104,10 @@ def history():
                         FROM purchases WHERE user_id =?""", user_id)
     portfolio = []
     for purchase in purchases:
-        symbol = purchases["symbol"]
-        shares = purchases["shares"]
-        price =  usd(purchases["price"])
-        timestamp = purchases["timestamp"]
+        symbol = purchase["symbol"]
+        shares = purchase["shares"]
+        price =  usd(purchase["price"])
+        timestamp = purchase["timestamp"]
         portfolio.append({
             "symbol": symbol,
             "share": shares,
@@ -237,7 +237,7 @@ def sell():
             return apology("股票查询错误")
         price = result["price"]
         total = price * shares
-        db.execute("UPDATE users SET cash = cash + ? WHERE user_id = ?", total, user_id)
+        db.execute("UPDATE users SET cash = cash + ? WHERE id = ?", total, user_id)
         db.execute("INSERT INTO purchases(user_id, symbol, shares, price) VALUES(?, ?, ?, ?)"
                    ,user_id, symbol, -shares, price)
         return redirect("/")
