@@ -244,18 +244,19 @@ def sell():
 
 
 @app.route("/change", methods=["GET", "POST"])
-def register():
+def change():
     if request.method == "GET":
         return render_template("change.html")
     else:
         try:
-            username = request.form.get("username")
             password = request.form.get("password")
+            new_password = request.form.get("new_password")
             again = request.form.get("confirmation")
-            if not username or not password or not again:
+            if not new_password or not password or not again:
                 return apology("必须填写全部字段")
-            if again != password:
+            if again != new_password:
                 return apology("两次密码不一致")
+        if 
             db.execute("INSERT INTO users(username, hash)  VALUES(?, ?)" ,
                 username, generate_password_hash(password))
         except sqlite3.IntegrityError:
