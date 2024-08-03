@@ -245,9 +245,8 @@ def sell():
 
 @app.route("/change", methods=["GET", "POST"])
 def register():
-    """更改密码"""
     if request.method == "GET":
-        return render_template("register.html")
+        return render_template("change.html")
     else:
         try:
             username = request.form.get("username")
