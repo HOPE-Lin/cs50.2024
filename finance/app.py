@@ -52,7 +52,6 @@ def index():
         total = total + value
         price = usd(price)
         value = usd(value)
-        total = usd(total)
         people.append({
             "symbol": symbol,
             "share": shares,
@@ -61,7 +60,9 @@ def index():
         })
     user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
     user_cash = usd(user_cash)
-    return render_template("index.html",people = people, total = total, cash = user_cash)
+    gtotal = total + user_cash
+    gtotal = usd(gtotal)
+    return render_template("index.html",people = people, total = gtotal, cash = user_cash)
 
 
 @app.route("/buy", methods=["GET", "POST"])
