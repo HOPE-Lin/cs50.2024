@@ -110,7 +110,7 @@ def history():
         timestamp = purchase["timestamp"]
         portfolio.append({
             "symbol": symbol,
-            "share": shares,
+            "shares": shares,
             "price": price,
             "timestamp" : timestamp
         })
