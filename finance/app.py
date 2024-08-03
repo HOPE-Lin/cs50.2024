@@ -257,8 +257,8 @@ def change():
             return apology("必须填写全部字段")
         if again != new_password:
             return apology("两次密码不一致")
-        hash = db.execute("SELECT hash FROM users WHERE id =?" , user_id)
-        if not check_password_hash(
+        rows = db.execute("SELECT hash FROM users WHERE id =?" , user_id)
+        if len(rows) != 1 or not check_password_hash(
             hash[0]["hash"], password
         ):
             return apology("密码错误")
