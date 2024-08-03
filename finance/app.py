@@ -190,7 +190,7 @@ def register():
         try:
             username = request.form.get("username")
             password = request.form.get("password")
-            again = request.form.get("again")
+            again = request.form.get("confirmation")
             if not username or not password or not again:
                 return apology("必须填写全部字段")
             if again != password:
