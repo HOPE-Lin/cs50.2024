@@ -213,5 +213,8 @@ def sell():
                                  GROUP BY symbol""", user_id, symbol)
         if user_shares < shares:
             return apology("股份不足")
+        result = lookup(symbol)
+        if not result:
+            return apology("股票查询错误")
         
     return apology("TODO")
