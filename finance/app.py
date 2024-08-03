@@ -35,8 +35,8 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    user_id = session[user_id]
-    purchases = db.execute(""""SELECT symbol, SUM(shares), price
+    user_id = session["user_id"]
+    purchases = db.execute("""SELECT symbol, SUM(shares), price
                         FROM purchases WHERE user_id =?
                         GROUP BY symbol HAVING SUM(shares)""", user_id)
     people = []
@@ -56,7 +56,7 @@ def index():
             "symbol": symbol,
             "share": shares,
             "price": price,
-            "value" = value
+            "value" : value
         })
     user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
     user_cash = usd(user_cash)
