@@ -7,14 +7,14 @@
 {% block main %}
     <form action="/change" method="post">
         <div class="mb-3">
-            
+            <input class="form-control mx-auto w-auto" name="password" placeholder="旧密码" type="password">
         </div>
         <div class="mb-3">
-            <input class="form-control mx-auto w-auto" name="password" placeholder="Password" type="password">
+            <input class="form-control mx-auto w-auto" name="new-password" placeholder="新密码" type="password">
         </div>
         <div class="mb-3">
-            <input class="form-control mx-auto w-auto" name="confirmation" placeholder="Password(again)" type="password">
+            <input class="form-control mx-auto w-auto" name="confirmation" placeholder="确认密码" type="password">
         </div>
-        <button class="btn btn-primary" type="submit">REGISTER</button>
+        <button class="btn btn-primary" type="submit">change</button>
     </form>
 {% endblock %}
