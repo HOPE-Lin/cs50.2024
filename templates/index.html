@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    查询
+{% endblock %}
+
+{% block main %}
+    <h2>您的股票</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>symbol</th>
+                <th>shares</th>
+                <th>price</th>
+                <th>values</th>
+            </tr>
+        </thead>
+    <tbody>
+        {% for per in people %}
+        <tr>
+            <td>{{per.symbol}}</td>
+            <td>{{per.shares}}</td>
+            <td>{{per.price}}</td>
+            <td>{{per.value}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+    <h3>你的账户余额为：{{cash}}</h3>
+    <h3>您的资产总计为:{{total}}</h3>
+{% endblock %}
