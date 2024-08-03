@@ -259,7 +259,7 @@ def change():
             return apology("两次密码不一致")
         hash = db.execute("SELECT hash FROM users WHERE id =?" , user_id)
         if not check_password_hash(
-            hash[0]["hash"], request.form.get("password")
+            hash[0]["hash"], password
         ):
             return apology("密码错误")
         db.execute("UPDATE users SET hash = ? WHERE id = ?",
