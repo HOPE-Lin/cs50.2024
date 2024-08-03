@@ -104,10 +104,10 @@ def history():
                         FROM purchases WHERE user_id =?""", user_id)
     portfolio = []
     for purchase in purchases:
-        symbol = purchases["symbol"]
-        shares = purchases["shares"]
-        price =  usd(purchases["price"])
-        timestamp = purchases["timestamp"]
+        symbol = purchase["symbol"]
+        shares = purchase["shares"]
+        price =  usd(purchase["price"])
+        timestamp = purchase["timestamp"]
         portfolio.append({
             "symbol": symbol,
             "share": shares,
