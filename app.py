@@ -110,7 +110,7 @@ def history():
         timestamp = purchase["timestamp"]
         portfolio.append({
             "symbol": symbol,
-            "share": shares,
+            "shares": shares,
             "price": price,
             "timestamp" : timestamp
         })
@@ -240,4 +240,28 @@ def sell():
         db.execute("UPDATE users SET cash = cash + ? WHERE id = ?", total, user_id)
         db.execute("INSERT INTO purchases(user_id, symbol, shares, price) VALUES(?, ?, ?, ?)"
                    ,user_id, symbol, -shares, price)
+        return redirect("/")
+
+
+@app.route("/change", methods=["GET", "POST"])
+def change():
+    user_id = session["user_id"]
+    if request.method == "GET":
+        return render_template("change.html")
+    else:
+
+        password = request.form.get("password")
+        new_password = request.form.get("new_password")
+        again = request.form.get("confirmation")
+        if not new_password or not password or not again:
+            return apology("必须填写全部字段")
+        if again != new_password:
+            return apology("两次密码不一致")
+        rows = db.execute("SELECT hash FROM users WHERE id =?" , user_id)
+        if len(rows) != 1 or not check_password_hash(
+            rows[0]["hash"], password
+        ):
+            return apology("密码错误或用户不存在")
+        db.execute("UPDATE users SET hash = ? WHERE id = ?",
+                   generate_password_hash(new_password), user_id)
         return redirect("/")
