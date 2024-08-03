@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    股票报价
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="post">
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" name="symbol" placeholder="股票代码" type="text" required>
+        </div>
+        <button class="btn btn-primary" type="submit">获取报价</button>
+    </form>
+{% endblock %}
