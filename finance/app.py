@@ -48,15 +48,16 @@ def index():
         if not result:
             return apology("股票查询出错")
         price = result["price"]
-        total = total +
-        price * shares
+        value = price * shares
+        total = total + value
         people.append({
             "symbol": symbol,
             "share": shares,
             "price": price,
+            "value" = value
         })
-
-    return apology("TODO")
+    user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
+    return render_template("index.html",people = people, total = total, cash = user_cash)
 
 
 @app.route("/buy", methods=["GET", "POST"])
