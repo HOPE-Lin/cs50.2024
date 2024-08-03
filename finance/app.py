@@ -237,7 +237,7 @@ def sell():
             return apology("股票查询错误")
         price = result["price"]
         total = price * shares
-        db.execute("UPDATE users SET cash = cash + ? WHERE user_id = ?", total, user_id)
+        db.execute("UPDATE users SET cash = cash + ? WHERE id = ?", total, user_id)
         db.execute("INSERT INTO purchases(user_id, symbol, shares, price) VALUES(?, ?, ?, ?)"
                    ,user_id, symbol, -shares, price)
         return redirect("/")
