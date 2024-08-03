@@ -259,9 +259,9 @@ def change():
             return apology("两次密码不一致")
         rows = db.execute("SELECT hash FROM users WHERE id =?" , user_id)
         if len(rows) != 1 or not check_password_hash(
-            hash[0]["hash"], password
+            rows[0]["hash"], password
         ):
-            return apology("密码错误")
+            return apology("密码错误或用户不存在")
         db.execute("UPDATE users SET hash = ? WHERE id = ?",
                    generate_password_hash(new_password), user_id)
-    return redirect("/")
+        return redirect("/")
