@@ -260,5 +260,6 @@ def change():
         hash = db.execute("SELECT hash FROM users WHERE id =?" , user_id)
         if generate_password_hash(password) ! = hash:
             return apology("密码错误")
-        db.execute("UPDATE users SET hash ? WHERE id = ?", total, user_id)
+        db.execute("UPDATE users SET hash = ? WHERE id = ?",
+                   generate_password_hash(new_password), user_id)
     return redirect("/")
