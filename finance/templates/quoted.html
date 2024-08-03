@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    股票报价结果
+{% endblock %}
+
+{% block main %}
+    <h1>{{ symbol }} 的股票报价</h1>
+    {% if price %}
+        <p>{{ symbol }} 当前价格为 ${{ price }}。</p>
+    {% else %}
+        <p>抱歉，我们无法获取股票价格。</p>
+    {% endif %}
+    <a href="/quote">重新查询</a>
+{% endblock %}

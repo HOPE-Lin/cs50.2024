@@ -35,6 +35,8 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
+    user_id = session[user_id]
+    
     return apology("TODO")
 
 
@@ -42,7 +44,28 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
-    return apology("TODO")
+    if request.method == "POST":
+        symbol = request.form.get("symbol")
+        if not symbol:
+            return apology("股票代码不能为空")
+        result = lookup(symbol)
+        if not result:
+            return apology("股票不存在")
+        shares = request.form.get("shares")
+        if not shares or shares.isdigit() or int(shares) <= 0:
+            return apology("股份数出现错误")
+        shares = int(shares)
+        price = result["price"]
+        user_id = session["user_id"]
+        user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
+        total = shares *  price
+        if total > user_cash:
+            return apology("余额不足")
+        db.execute("UPDATE users SET cash = cash - ? WHERE id = ?" , total, user_id)
+        db.execute("INSERT INTO purchases (user_id, symbol, shares, price) VALUES (?, ?, ?, ?)",
+               user_id, symbol, shares, price)
+        return redirect("/")
+    return render_template("buy.html")
 
 
 @app.route("/history")
@@ -106,13 +129,39 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
-    return apology("TODO")
+    if request.method == "POST":
+        symbol = request.form.get("symbol")
+        if not symbol:
+             return apology("股票代码不能为空")
+        result = lookup(symbol)
+        if result:
+            return render_template("quoted.html",symbol=result["symbol"], price=result["price"])
+        else:
+            return apology("无法获得股票价格")
+    return render_template("quote.html")
 
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
-    return apology("TODO")
+    if request.method == "GET":
+        return render_template("register.html")
+    else:
+        try:
+            username = request.form.get("username")
+            password = request.form.get("password")
+            again = request.form.get("again")
+            if not username or not password or not again:
+                return apology("必须填写全部字段")
+            if again != password:
+                return apology("两次密码不一致")
+            db.execute("INSERT INTO users(username, hash)  VALUES(?, ?)" ,
+                username, generate_password_hash(password))
+        except sqlite3.IntegrityError:
+            return apology("重复名字")
+        except Exception as e:
+            return apology(f"出现错误:{e}")
+    return redirect("/")
 
 
 @app.route("/sell", methods=["GET", "POST"])
