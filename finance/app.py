@@ -39,7 +39,10 @@ def index():
     result = db.execute(""""SELECT symbol, SUM(shares), price
                         FROM purchases WHERE user_id =?
                         GROUP BY symbol HAVING SUM(shares)""", user_id)
-    
+    people = []
+    total = 0
+    for _ in result:
+        
 
     return apology("TODO")
 
