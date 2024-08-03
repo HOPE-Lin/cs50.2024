@@ -102,7 +102,8 @@ def history():
                         FROM purchases WHERE user_id =?""", user_id)
     portfolio = []
     for portfolio in purchases:
-        s
+        symbol = purchases["symbol"]
+        shares =
     return apology("TODO")
 
 
