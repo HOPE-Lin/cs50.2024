@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    更改密码
+{% endblock %}
+
+{% block main %}
+    <form action="/change" method="post">
+        <div class="mb-3">
+            
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" name="password" placeholder="Password" type="password">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" name="confirmation" placeholder="Password(again)" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">REGISTER</button>
+    </form>
+{% endblock %}
