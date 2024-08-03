@@ -195,5 +195,23 @@ def sell():
     """Sell shares of stock"""
     user_id = session["user_id"]
     if request.method == "GET":
+        portfolio =  db.execute("""SELECT symbol, SUM(shares) AS shares, price
+                        FROM purchases WHERE user_id =?
+                        GROUP BY symbol HAVING SUM(shares) > 0""", user_id)
+        return render_template("sell.html", portfolio = portfolio)
+    else:
+        symbol = request.form.get("symbol")
+        shares = request.form.get("shares")
+        if not symbol:
+            return apology("请选择股票")
+        if not shares or shares.isdigit() or int(shares) <= 0:
+            return apology("股份选择错误")
+        shares = int(shares)
+        user_shares = db.execute("""SELECT SUM(shares) AS shares
+                                 FROM purchases
+                                 WHERE user_id = ? AND symbol = ?
+                                 GROUP BY symbol""", user_id, symbol)
+        if user_shares < shares:
+            return apology("股份不足")
         
     return apology("TODO")
