@@ -44,7 +44,17 @@ def index():
     for purchase in purchases:
         symbol = purchase["symbol"]
         shares = purchase["shares"]
-        result = 
+        result = lookup(symbol)
+        if not result:
+            return apology("股票查询出错")
+        price = result["price"]
+        total = total +
+        price * shares
+        people.append({
+            "symbol": symbol,
+            "share": shares,
+            "price": price,
+        })
 
     return apology("TODO")
 
