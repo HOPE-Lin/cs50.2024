@@ -101,7 +101,7 @@ def history():
     purchases = db.execute("""SELECT symbol, shares, price, timestamp
                         FROM purchases WHERE user_id =?""", user_id)
     portfolio = []
-    for portfolio in purchases:
+    for purchase in purchases:
         symbol = purchases["symbol"]
         shares = purchases["shares"]
         price =  usd(purchases["price"])
