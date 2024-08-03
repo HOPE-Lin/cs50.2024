@@ -50,6 +50,9 @@ def index():
         price = result["price"]
         value = price * shares
         total = total + value
+        price = usd(price)
+        value = usd(value)
+        total = usd(total)
         people.append({
             "symbol": symbol,
             "share": shares,
@@ -57,6 +60,7 @@ def index():
             "value" = value
         })
     user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
+    user_cash = usd(user_cash)
     return render_template("index.html",people = people, total = total, cash = user_cash)
 
 
