@@ -204,7 +204,7 @@ def sell():
         shares = request.form.get("shares")
         if not symbol:
             return apology("请选择股票")
-        if not shares or shares.isdigit() or int(shares) <= 0:
+        if not shares or not shares.isdigit() or int(shares) <= 0:
             return apology("股份选择错误")
         shares = int(shares)
         user_shares = db.execute("""SELECT SUM(shares) AS shares
@@ -218,7 +218,7 @@ def sell():
             return apology("股票查询错误")
         price = result["price"]
         total = price * shares
-        db.ececute("UPDATE users SET cash = cash + ? WHERE user_id = ?", total, user_id)
-        db.ececute("INSERT INTO purchases(user_id, symbol, shares, price) VALUES(?, ?, ?, ?)"
+        db.execute("UPDATE users SET cash = cash + ? WHERE user_id = ?", total, user_id)
+        db.execute("INSERT INTO purchases(user_id, symbol, shares, price) VALUES(?, ?, ?, ?)"
                    ,user_id, symbol, -shares, price)
         return redirect("/")
