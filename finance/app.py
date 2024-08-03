@@ -56,7 +56,7 @@ def index():
         value = usd(value)
         people.append({
             "symbol": symbol,
-            "share": shares,
+            "shares": shares,
             "price": price,
             "value" : value
         })
