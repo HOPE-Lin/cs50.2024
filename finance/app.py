@@ -245,22 +245,20 @@ def sell():
 
 @app.route("/change", methods=["GET", "POST"])
 def change():
+    user_id = session["user_id"]
     if request.method == "GET":
         return render_template("change.html")
     else:
-        try:
-            password = request.form.get("password")
-            new_password = request.form.get("new_password")
-            again = request.form.get("confirmation")
-            if not new_password or not password or not again:
-                return apology("必须填写全部字段")
-            if again != new_password:
-                return apology("两次密码不一致")
-        if 
-            db.execute("INSERT INTO users(username, hash)  VALUES(?, ?)" ,
-                username, generate_password_hash(password))
-        except sqlite3.IntegrityError:
-            return apology("重复名字")
-        except Exception as e:
-            return apology(f"出现错误:{e}")
+
+        password = request.form.get("password")
+        new_password = request.form.get("new_password")
+        again = request.form.get("confirmation")
+        if not new_password or not password or not again:
+            return apology("必须填写全部字段")
+        if again != new_password:
+            return apology("两次密码不一致")
+        hash = db.execute("SELECT hash FROM users WHERE id =?" , user_id)
+        if generate_password_hash(password) ! = hash:
+            return apology("密码错误")
+        db.execute("UPDATE users SET hash ? WHERE id = ?", total, user_id)
     return redirect("/")
