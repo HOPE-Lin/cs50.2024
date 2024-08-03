@@ -211,6 +211,8 @@ def sell():
                                  FROM purchases
                                  WHERE user_id = ? AND symbol = ?
                                  GROUP BY symbol""", user_id, symbol)[0]["shares"]
+        if not user_shares:
+            return apology("选择有误")
         if user_shares < shares:
             return apology("股份不足")
         result = lookup(symbol)
