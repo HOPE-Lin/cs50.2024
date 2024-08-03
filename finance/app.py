@@ -98,7 +98,11 @@ def buy():
 def history():
     """Show history of transactions"""
     user_id = session["user_id"]
-    portfolio = 
+    purchases = db.execute("""SELECT symbol, shares, price
+                        FROM purchases WHERE user_id =?""", user_id)
+    portfolio = []
+    for portfolio in purchases:
+        s
     return apology("TODO")
 
 
