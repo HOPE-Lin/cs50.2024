@@ -194,5 +194,6 @@ def register():
 def sell():
     """Sell shares of stock"""
     user_id = session["user_id"]
-    
+    if request.method == "GET":
+        
     return apology("TODO")
