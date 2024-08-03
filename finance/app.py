@@ -79,7 +79,7 @@ def buy():
         if not result:
             return apology("股票不存在")
         shares = request.form.get("shares")
-        if not shares or shares.isdigit() or int(shares) <= 0:
+        if not shares or not shares.isdigit() or int(shares) <= 0:
             return apology("股份数出现错误")
         shares = int(shares)
         price = result["price"]
