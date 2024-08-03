@@ -210,11 +210,15 @@ def sell():
         user_shares = db.execute("""SELECT SUM(shares) AS shares
                                  FROM purchases
                                  WHERE user_id = ? AND symbol = ?
-                                 GROUP BY symbol""", user_id, symbol)
+                                 GROUP BY symbol""", user_id, symbol)[0]["shares"]
         if user_shares < shares:
             return apology("股份不足")
         result = lookup(symbol)
         if not result:
             return apology("股票查询错误")
-        
-    return apology("TODO")
+        price = result["price"]
+        total = price * shares
+        db.ececute("UPDATE users SET cash = cash + ? WHERE user_id = ?", total, user_id)
+        db.ececute("INSERT INTO purchases(user_id, symbol, shares, price) VALUES(?, ?, ?, ?)"
+                   ,user_id, symbol, -shares, price)
+        return redirect("/")
