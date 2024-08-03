@@ -97,7 +97,8 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-    
+    user_id = session["user_id"]
+    portfolio = 
     return apology("TODO")
 
 
