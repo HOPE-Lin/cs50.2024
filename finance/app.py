@@ -98,13 +98,21 @@ def buy():
 def history():
     """Show history of transactions"""
     user_id = session["user_id"]
-    purchases = db.execute("""SELECT symbol, shares, price
+    purchases = db.execute("""SELECT symbol, shares, price, timestamp
                         FROM purchases WHERE user_id =?""", user_id)
     portfolio = []
     for portfolio in purchases:
         symbol = purchases["symbol"]
-        shares =
-    return apology("TODO")
+        shares = purchases["shares"]
+        price =  usd(purchases["price"])
+        timestamp = purchases["timestamp"]
+        portfolio.append({
+            "symbol": symbol,
+            "share": shares,
+            "price": price,
+            "timestamp" : timestamp
+        })
+    return render_template("history.html", portfolio = portfolio)
 
 
 @app.route("/login", methods=["GET", "POST"])
