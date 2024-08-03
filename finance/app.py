@@ -241,3 +241,26 @@ def sell():
         db.execute("INSERT INTO purchases(user_id, symbol, shares, price) VALUES(?, ?, ?, ?)"
                    ,user_id, symbol, -shares, price)
         return redirect("/")
+
+
+@app.route("/change", methods=["GET", "POST"])
+def register():
+    """更改密码"""
+    if request.method == "GET":
+        return render_template("register.html")
+    else:
+        try:
+            username = request.form.get("username")
+            password = request.form.get("password")
+            again = request.form.get("confirmation")
+            if not username or not password or not again:
+                return apology("必须填写全部字段")
+            if again != password:
+                return apology("两次密码不一致")
+            db.execute("INSERT INTO users(username, hash)  VALUES(?, ?)" ,
+                username, generate_password_hash(password))
+        except sqlite3.IntegrityError:
+            return apology("重复名字")
+        except Exception as e:
+            return apology(f"出现错误:{e}")
+    return redirect("/")
