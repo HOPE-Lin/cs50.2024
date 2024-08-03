@@ -258,7 +258,9 @@ def change():
         if again != new_password:
             return apology("两次密码不一致")
         hash = db.execute("SELECT hash FROM users WHERE id =?" , user_id)
-        if generate_password_hash(password) ! = hash:
+        if not check_password_hash(
+            hash[0]["hash"], request.form.get("password")
+        ):
             return apology("密码错误")
         db.execute("UPDATE users SET hash = ? WHERE id = ?",
                    generate_password_hash(new_password), user_id)
