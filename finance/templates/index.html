@@ -9,13 +9,13 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <td>symbol</td>
-                <td>shares</td>
-                <td>price</td>
-                <td>values</td>
+                <th>symbol</th>
+                <th>shares</th>
+                <th>price</th>
+                <th>values</th>
             </tr>
         </thead>
-    <tboby>
+    <tbody>
         {% for per in people %}
         <tr>
             <td>{{per.symbol}}</td>
@@ -24,7 +24,7 @@
             <td>{{per.value}}</td>
         </tr>
         {% endfor %}
-    </tboby>
+    </tbody>
     </table>
     <h3>你的账户余额为：{{cash}}</h3>
     <h3>您的资产总计为:{{total}}</h3>
