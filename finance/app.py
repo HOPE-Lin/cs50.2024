@@ -38,7 +38,7 @@ def index():
     user_id = session["user_id"]
     purchases = db.execute("""SELECT symbol, SUM(shares), price
                         FROM purchases WHERE user_id =?
-                        GROUP BY symbol HAVING SUM(shares)""", user_id)
+                        GROUP BY symbol HAVING SUM(shares) > 0""", user_id)
     people = []
     total = 0
     for purchase in purchases:
@@ -59,8 +59,8 @@ def index():
             "value" : value
         })
     user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
-    user_cash = usd(user_cash)
     gtotal = total + user_cash
+    user_cash = usd(user_cash)
     gtotal = usd(gtotal)
     return render_template("index.html",people = people, total = gtotal, cash = user_cash)
 
